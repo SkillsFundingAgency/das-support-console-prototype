@@ -48,7 +48,7 @@
             }
           ]
         }) }}
-        <a href="initial-search" >Clear search</a>
+        <a href="initial-search" class="govuk-link">Clear search</a>
          <!--radio selection ENDS-->
      </form>
 
@@ -66,7 +66,7 @@
         {{ govukTable({
           
           captionClasses: "govuk-table__caption--m",
-          firstCellIsHeader: true,
+          firstCellIsHeader: false,
           head: [
             {
               text: "Name"
@@ -94,7 +94,8 @@
                 text: "Active"
               },
               {
-                text: "123"
+                html: "<a href=initial-search>view</a>"
+                
               }
             ]
           ]
