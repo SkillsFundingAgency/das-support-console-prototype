@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+  Support console - Continuous improvements
 {% endblock %}
 
 {% block content %}
@@ -10,34 +10,47 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
+        <span class="govuk-caption-xl">Continuous improvements</span>
+        Support console
+      
+      </h1>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+      <!--main accordian STARTS-->
+      
 
-      <h2 class="govuk-heading-m">About this page</h2>
-
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/docs/tutorials-and-examples">Example pages and documentation</a>
-        </li>
-        <li>
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-        </li>
-      </ul>
+      {{ govukAccordion({
+        id: "accordion-with-summary-sections",
+        items: [
+          {
+            heading: {
+              text: "Support console 2021 "
+            },
+            summary: {
+              text: "Improvements made within 2021 to the console and its content"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list">
+                  <li>
+                    <h2 class="govuk-heading-m">CIDES-350 Create designs for Support Console</h2>
+                  </li>
+                  <li>
+                    <a class="govuk-link" href="https://skillsfundingagency.atlassian.net/browse/CIDES-350" target="_blank">CIDES-350 Create designs for Support Console (opens in a new tab)</a>
+                  </li>
+                  <li>
+                    <a class="govuk-link" href="https://lucid.app/lucidspark/5bb0fe80-0d03-4d13-bcdb-7f124fc5891f/edit?beaconFlowId=E4515B8B81FDEDD0#" target="_blank">Lucid board (opens in a new tab)</a>
+                  </li>
+                  <li>
+                    <a class="govuk-link" href="#">As-is prototype - Yet to be built</a>
+                  </li>
+              </ul>'
+            }
+          }
+                  
+           
+        ]
+      }) }}
+      <!--main accordian ENDS-->
     </div>
   </div>
 
