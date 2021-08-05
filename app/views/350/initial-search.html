@@ -1,0 +1,56 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Support console - Continuous improvements
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-two-thirds">
+     
+ <form action="initial-search" method="post">
+     
+      
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Search</h1>
+
+      <div class="govuk-form-group">
+       <!--search input STARTS-->
+        <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-30" id="initial-search-criteria" name="initial-search-criteria" type="text" spellcheck="false">
+          <button data-module="govuk-button" class="no-button"><div class="govuk-input__suffix" aria-hidden="true"></div></button>
+        </div>
+      </div>
+       <!--search input ENDS-->
+
+          <!--radio selection STARTS-->
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          idPrefix: "initial-search",
+          name: "initial-search",
+          fieldset: {
+            legend: {
+              text: " ",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+         
+          items: [
+            {
+              value: "users",
+              text: "Users"
+            },
+            {
+              value: "accounts",
+              text: "Accounts"
+            }
+          ]
+        }) }}
+
+         <!--radio selection ENDS-->
+     </form>
+    </div>
+  </div>
+
+{% endblock %}
