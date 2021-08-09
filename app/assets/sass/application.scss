@@ -22,3 +22,12 @@ $govuk-assets-path: '/govuk/assets/';
     float: left;
     clear: none;}
     .no-button{padding:0px;margin:0px;background-color:none;border:none;}
+    .blueContainer{width:100%;padding:10px 0px 1px 20px;background-color:#1d70b8;color:white;height:33px;}
+    .blueContainer p{color:white}
+    .greyContainer{width:100%;padding:10px 0px 1px 20px;background-color:#fff;height:33px;}
+    .greyContainer p{color:#1d70b8}
+    a.greyContainer {text-decoration:none;}
+    .blueContainer a{text-decoration:none;}
+    .borderLeft{border-left-style: solid;padding-top:70px;position:relative;left:-10px;border-width: 0px 0px 0px 1px;border-color:#b1b4b6;padding-left:50px;}
+    .noUnder{text-decoration:none;}
+    .govuk-width-container {max-width:1120px;}

@@ -1,0 +1,155 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Support console - Continuous improvements
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-whole">
+     
+ <form action="#" method="post" class="govuk-!-margin-bottom-9">
+     
+      
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-6">ONA CONSULTING LTD
+        <span class="govuk-caption-l">Account ID XJ9NYR, created 21/10/2019</span>
+      </h1>
+        
+      
+      
+
+         
+     
+       
+     
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+           <a href="ona-organisations" class="noUnder"> <div class="greyContainer">
+               <p>Organisations</p>
+            </div></a>
+            <a href="ona-finance" class="noUnder"><div class="greyContainer">
+              <p>Finance</p>
+            </div></a>
+            <a href="ona-team-members" class="noUnder"><div class="blueContainer">
+              <p>Team members</p>
+            </div></a>
+            <a href="ona-commitments" class="noUnder"><div class="greyContainer">
+              <p>Commitments</p>
+            </div></a>
+          </div>
+        
+
+    
+          <div class="govuk-grid-column-three-quarters ">
+              <div class="borderLeft">
+                <h2 class="govuk-heading-l">Team members</h2>
+                
+                 
+                          {{ govukTable({
+                            
+                            captionClasses: "govuk-table__caption--m",
+                            firstCellIsHeader: false,
+                            head: [
+                              {
+                                text: "Name",
+                                classes: 'govuk-!-width-one-third'
+                              },
+                              {
+                                text: "Email",
+                                classes: 'govuk-!-width-one-half'
+                              },
+                              {
+                                text: "Role"
+                              },
+                              {
+                                text: "Status"
+                              }
+                            ],
+                            rows: [
+                              [
+                              
+                                {
+                                  html: "<a href=#>Brian Milman</a>"
+                                },
+                                {
+                                  text: "brian.milman@test.com"
+                                },
+                                {
+                                  text: "Owner"
+                                },
+                                {
+                                  html: "Active"
+                                  
+                                }
+                                
+                              ],
+                              [
+                              
+                                {
+                                  html: "<a href=#>Atique Ahmad</a>"
+                                },
+                                {
+                                  text: "atique@test.com"
+                                },
+                                {
+                                  text: "Owner"
+                                },
+                                {
+                                  html: "Active"
+                                  
+                                }
+                                
+                              ],
+                              [
+                              
+                                {
+                                  html: "<a href=#>Hazel Fletcher</a>"
+                                },
+                                {
+                                  text: "Hazel@test.com"
+                                },
+                                {
+                                  text: "Transactor"
+                                },
+                                {
+                                  html: "Active"
+                                  
+                                }
+                                
+                              ],
+                              [
+                              
+                                {
+                                  html: "<a href=#>Karen Garland</a>"
+                                },
+                                {
+                                  text: "karen@test.com"
+                                },
+                                {
+                                  text: "Transactor"
+                                },
+                                {
+                                  html: "Active"
+                                  
+                                }
+                                
+                              ]
+                              
+                            ]
+                          }) }}
+
+            </div>
+            {{ govukButton({
+              text: "Change team members or roles"
+            }) }}
+      </form>
+      </div>
+    </div>
+    </div>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -21,7 +21,16 @@ router.post(`/350/initial-search`, function (req, res) {
 
 
 
+router.post(`/350/uln-or-cohort`, function (req, res) {
+    const ulnORcohort = req.session.data['uln-or-cohort'];
+    
 
+    if (ulnORcohort === 'uln'
+       ) {
+        res.redirect(`/350/uln-view`);
+    }
+   else res.redirect(`/350/cohort-summary`);
+});
 
 
 

@@ -1,0 +1,230 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Support console - Continuous improvements
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-whole">
+     
+ <form action="initial-search" method="post" class="govuk-!-margin-bottom-9">
+     
+      
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-6">ONA CONSULTING LTD
+        <span class="govuk-caption-l">Account ID XJ9NYR, created 21/10/2019</span>
+      </h1>
+        
+      
+      
+
+         
+     
+       
+     
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+           <a href="ona-organisations" class="noUnder"> <div class="greyContainer">
+               <p>Organisations</p>
+            </div></a>
+            <a href="ona-finance" class="noUnder"><div class="blueContainer">
+              <p>Finance</p>
+            </div></a>
+            <a href="ona-team-members" class="noUnder"><div class="greyContainer">
+              <p>Team members</p>
+            </div></a>
+            <a href="ona-commitments" class="noUnder"><div class="greyContainer">
+              <p>Commitments</p>
+            </div></a>
+          </div>
+        
+
+    
+          <div class="govuk-grid-column-three-quarters ">
+              <div class="borderLeft">
+                <h2 class="govuk-heading-l">Finance</h2>
+                
+                 
+              <!--content for tabs START-->
+
+              {% set pastDayHtml %}
+
+                  {{ govukTable({
+                    head: [
+                      {
+                        text: "PAYE ref"
+                      },
+                      {
+                        text: "Name"
+                      },
+                      {
+                        text: "Date added"
+                      },
+                      {
+                        text: ""
+                      }
+                    ],
+                    rows: [
+                      [
+                        {
+                          text: "0**/*****3"
+                        },
+                        {
+                          text: ""
+                        },
+                        {
+                          text: "10/21/2019 10:48:43 AM"
+                        },
+                        {
+                          html: "<a href=ona-finance-transactions>view</a>"
+                        }
+                      ],
+                      [
+                        {
+                          text: "1**/*****4"
+                        },
+                        {
+                          text: "End to End Scenario for proto_Test"
+                        },
+                        {
+                          text: "7/18/2020 9:38:03 AM"
+                        },
+                        {
+                          html: "<a href=#>view</a>"
+                        }
+                      ]
+                    ]
+                  }) }}
+                  {% endset -%}
+
+                  {% set pastWeekHtml %}
+
+                  {{ govukTable({
+                    head: [
+                      {
+                        text: "Case manager"
+                      },
+                      {
+                        text: "Cases opened"
+                      },
+                      {
+                        text: "Cases closed"
+                      }
+                    ],
+                    rows: [
+                      [
+                        {
+                          text: "David Francis"
+                        },
+                        {
+                          text: "24"
+                        },
+                        {
+                          text: "18"
+                        }
+                      ],
+                      [
+                        {
+                          text: "Paul Farmer"
+                        },
+                        {
+                          text: "16"
+                        },
+                        {
+                          text: "20"
+                        }
+                      ],
+                      [
+                        {
+                          text: "Rita Patel"
+                        },
+                        {
+                          text: "24"
+                        },
+                        {
+                          text: "27"
+                        }
+                      ]
+                    ]
+                  }) }}
+                  {% endset -%}
+
+                   <!--content for tabs END-->
+
+                  <!--tabs START-->
+
+                      {{ govukTabs({
+                        items: [
+                          {
+                            label: "PAYE schemes",
+                            id: "past-day",
+                            panel: {
+                              html: pastDayHtml
+                            }
+                          },
+                          {
+                            label: "Transactions",
+                            id: "past-week",
+                            panel: {
+                              html: pastWeekHtml
+                            }
+                          
+                          }
+                        ]
+                      }) }}
+
+
+                       <!--tabs END-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                         
+
+            </div>
+
+      </form>
+      </div>
+    </div>
+    </div>
+
+    </div>
+  </div>
+
+{% endblock %}
