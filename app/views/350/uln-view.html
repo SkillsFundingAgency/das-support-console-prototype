@@ -35,7 +35,7 @@
             <a href="ona-team-members" class="noUnder"><div class="greyContainer">
               <p>Team members</p>
             </div></a>
-            <a href="ona-commitments" class="noUnder"><div class="greyContainer">
+            <a href="ona-commitments" class="noUnder"><div class="blueContainer">
               <p>Commitments</p>
             </div></a>
           </div>
@@ -44,96 +44,62 @@
     
           <div class="govuk-grid-column-three-quarters ">
               <div class="borderLeft">
-                <h2 class="govuk-heading-l govuk-!-margin-bottom-3">0**/*****3 levy declarations</h2>
-                <h3 class="govuk-heading-m govuk-!-margin-bottom-1">End to End Scenario for LE_test_102_17Jul2020</h3>
-                <p class="govuk-body govuk-!-margin-top-1">
-                  PAYE scheme added 17/07/2020
+                <h3 class="govuk-heading-m">Confidentiality</h3>
+                <p class="govuk-body">
+                  Don't share details of an organisation's apprenticeships with anyone<br>from a different organisation.
                 <p>
-                
-                 
+                <h2 class="govuk-heading-l">View ULN</h2>
+                <h3 class="govuk-heading-m">ULN: 2618290932</h3>
+                <h3 class="govuk-heading-m">Number of apprentices: 1</h3>
                           {{ govukTable({
                             
                             captionClasses: "govuk-table__caption--m",
                             firstCellIsHeader: false,
                             head: [
                               {
-                                text: "Submission date",
-                                classes: 'govuk-!-width-one-third'
+                                text: "Name"
                               },
                               {
-                                text: "Payroll date"                              },
-                              {
-                                text: "Id"
+                                text: "UKPRN"
                               },
                               {
-                                text: "Description"
+                                text: "Organisation"
                               },
                               {
-                                text: "Levy YTD"
+                                text: "Training dates"
+                              },
+                              {
+                                text: "Status"
+                              },
+                              {
+                                text: ""
                               }
                             ],
                             rows: [
                               [
                               
                                 {
-                                  html: "<b>15-06/2020 12:00:00PM</b>"
+                                  text: "John Smith"
                                 },
                                 {
-                                  html: "<b>20-213 (Jun)</b>"
+                                  text: "10025874"
                                 },
                                 {
-                                  html: "<b>203069123456</b>"
+                                  text: "ONA CONSULTING LTD"
                                 },
                                 {
-                                  text: ""
+                                  html: "03/19 to 12/20"
                                   
                                 },
                                 {
-                                  html: "<b>£149,985.00</b>"
-                                  
-                                }
-                                
-                              ],
-                              [
-                              
-                                {
-                                  html: "<b>15-06/2020 12:00:00PM</b>"
-                                },
-                                {
-                                  html: "<b>20-212 (May)</b>"
-                                },
-                                {
-                                  html: "<b>203069123342</b>"
-                                },
-                                {
-                                  text: ""
+                                  html: "Live"
                                   
                                 },
                                 {
-                                  html: "<b>£143,986.00</b>"
+                                  html: "<a href=apprentice-details>View</a>"
                                   
                                 }
                                 
-                              ],
-                              [
-                              
-                                {
-                                  html: "<b>15-06/2020 12:00:00PM</b>"
-                                },
-                                {
-                                  html: "<b>20-211 (Apr)</b>"
-                                },
-                                {
-                                  html: "<b>203069123456</b>"
-                                },
-                                {
-                                  text: ""
-                                  
-                                },
-                                {
-                                  html: "<b>£135,382.00</b>"
-                                  
-                                }
                                 
                               ]
                               
@@ -141,7 +107,7 @@
                           }) }}
 
             </div>
-           
+            
       </form>
       </div>
     </div>

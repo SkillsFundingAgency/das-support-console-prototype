@@ -92,7 +92,7 @@
                           text: "7/18/2020 9:38:03 AM"
                         },
                         {
-                          html: "<a href=#>view</a>"
+                          html: "<a href=ona-finance-transactions-alt>view</a>"
                         }
                       ]
                     ]
@@ -101,50 +101,67 @@
 
                   {% set pastWeekHtml %}
 
+                  <div class="data__purple-block govuk-!-margin-bottom-6">
+                    <span class="data-item bold-xlarge">£246,992.30</span><br>
+                    <span class="data-item bold-xsmall">Current balance</span>
+                  </div>
+
+
                   {{ govukTable({
                     head: [
                       {
-                        text: "Case manager"
+                        text: "Payment date"
                       },
                       {
-                        text: "Cases opened"
+                        text: "Description"
                       },
                       {
-                        text: "Cases closed"
+                        text: "Amount"
                       }
                     ],
                     rows: [
                       [
                         {
-                          text: "David Francis"
+                          text: "23/07/2020"
                         },
                         {
-                          text: "24"
+                          text: "Levy"
                         },
                         {
-                          text: "18"
+                          text: "£10,998.90"
                         }
                       ],
                       [
                         {
-                          text: "Paul Farmer"
+                          text: "17/07/2020"
                         },
                         {
-                          text: "16"
+                          text: "Transfer received from"
                         },
                         {
-                          text: "20"
+                          text: "-£10,000.00"
                         }
                       ],
                       [
                         {
-                          text: "Rita Patel"
+                          text: "17/07/2020"
                         },
                         {
-                          text: "24"
+                          text: "Transfer received from"
                         },
                         {
-                          text: "27"
+                          text: "-£10,000.00"
+                        }
+                      ],
+                      [
+                        {
+                          text: "17/07/2020"
+                        },
+                        {
+                          text: "Training provider - name not recognised"
+                        },
+                        {
+                          text: "-£10,000.00"
                         }
                       ]
                     ]
