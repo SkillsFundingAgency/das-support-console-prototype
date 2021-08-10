@@ -52,3 +52,16 @@ $govuk-assets-path: '/govuk/assets/';
         text-transform: none;
         color:#fff;    
     }
+    .inline{
+        float: left;
+        clear: none;
+        position: relative;
+        top: 44px;
+        left: 79px;
+        margin-bottom: -40px;
+    margin-top:-25px;
+    }
+    .govuk-input--width-2 {
+        max-width: 5.4ex;
+        margin-top: -25px;
+    }
