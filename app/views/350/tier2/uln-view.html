@@ -1,0 +1,119 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Support console - Continuous improvements
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-whole">
+     
+ <form action="#" method="post" class="govuk-!-margin-bottom-9">
+     
+      
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-6">ONA CONSULTING LTD
+        <span class="govuk-caption-l">Account ID XJ9NYR, created 21/10/2019</span>
+      </h1>
+        
+      
+      
+
+         
+     
+       
+     
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+           <a href="ona-organisations" class="noUnder"> <div class="greyContainer">
+               <p>Organisations</p>
+            </div></a>
+            <a href="ona-finance" class="noUnder"><div class="greyContainer">
+              <p>Finance</p>
+            </div></a>
+            <a href="ona-team-members" class="noUnder"><div class="greyContainer">
+              <p>Team members</p>
+            </div></a>
+            <a href="ona-commitments" class="noUnder"><div class="blueContainer">
+              <p>Commitments</p>
+            </div></a>
+          </div>
+        
+
+    
+          <div class="govuk-grid-column-three-quarters ">
+              <div class="borderLeft">
+                <h3 class="govuk-heading-m">Confidentiality</h3>
+                <p class="govuk-body">
+                  Don't share details of an organisation's apprenticeships with anyone<br>from a different organisation.
+                <p>
+                <h2 class="govuk-heading-l">View ULN</h2>
+                <h3 class="govuk-heading-m">ULN: 2618290932</h3>
+                <h3 class="govuk-heading-m">Number of apprentices: 1</h3>
+                          {{ govukTable({
+                            
+                            captionClasses: "govuk-table__caption--m",
+                            firstCellIsHeader: false,
+                            head: [
+                              {
+                                text: "Name"
+                              },
+                              {
+                                text: "UKPRN"
+                              },
+                              {
+                                text: "Organisation"
+                              },
+                              {
+                                text: "Training dates"
+                              },
+                              {
+                                text: "Status"
+                              },
+                              {
+                                text: ""
+                              }
+                            ],
+                            rows: [
+                              [
+                              
+                                {
+                                  text: "John Smith"
+                                },
+                                {
+                                  text: "10025874"
+                                },
+                                {
+                                  text: "ONA CONSULTING LTD"
+                                },
+                                {
+                                  html: "03/19 to 12/20"
+                                  
+                                },
+                                {
+                                  html: "Live"
+                                  
+                                },
+                                {
+                                  html: "<a href=apprentice-details>View</a>"
+                                  
+                                }
+                                
+                                
+                              ]
+                              
+                            ]
+                          }) }}
+
+            </div>
+            
+      </form>
+      </div>
+    </div>
+    </div>
+
+    </div>
+  </div>
+
+{% endblock %}

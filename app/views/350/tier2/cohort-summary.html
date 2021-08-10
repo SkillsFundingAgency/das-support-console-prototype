@@ -1,0 +1,153 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Support console - Continuous improvements
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-whole">
+     
+ <form action="#" method="post" class="govuk-!-margin-bottom-9">
+     
+      
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-6">ONA CONSULTING LTD
+        <span class="govuk-caption-l">Account ID XJ9NYR, created 21/10/2019</span>
+      </h1>
+        
+      
+      
+
+         
+     
+       
+     
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+           <a href="ona-organisations" class="noUnder"> <div class="greyContainer">
+               <p>Organisations</p>
+            </div></a>
+            <a href="ona-finance" class="noUnder"><div class="greyContainer">
+              <p>Finance</p>
+            </div></a>
+            <a href="ona-team-members" class="noUnder"><div class="greyContainer">
+              <p>Team members</p>
+            </div></a>
+            <a href="ona-commitments" class="noUnder"><div class="blueContainer">
+              <p>Commitments</p>
+            </div></a>
+          </div>
+        
+
+    
+          <div class="govuk-grid-column-three-quarters ">
+              <div class="borderLeft">
+              
+                <h2 class="govuk-heading-l govuk-!-margin-bottom-9">Cohort summary</h2>
+
+                <p class="govuk-body">
+                  We found the following cohort:
+                <p>
+               
+                          {{ govukTable({
+                            
+                            caption: "",
+                            captionClasses: "govuk-table__caption--m",
+                            firstCellIsHeader: false,
+                            head: [
+                              {
+                                text: " ",
+                                classes: 'govuk-!-width-one-half'
+                              },
+                             
+                              {
+                                text: "",
+                                classes: 'govuk-!-width-one-half'
+                              }
+                            ],
+                            rows: [
+                              [
+                              
+                                {
+                                  text: "Cohort reference"
+                                },
+                                {
+                                  html: "JKB967"
+                                  
+                                }
+                                
+                                
+                              ],
+                              [
+                              
+                              {
+                                text: "Employer's account name"
+                              },
+                              {
+                                html: "ONA CONSULTING LTD"
+                                
+                              }
+                              
+                              
+                            ],
+                            [
+                              
+                            {
+                              text: "Provider name"
+                            },
+                            {
+                              text: "MERCEDES-BENZ CARS UK LIMITED"
+                              
+                            }
+                            
+                            
+                          ],
+                          [
+                            
+                          {
+                            text: "UKPRN"
+                          },
+                          {
+                            text: "10022856"
+                            
+                          }
+                          
+                          
+                        ],
+                        [
+                          
+                        {
+                          text: "Cohort status"
+                        },
+                        {
+                          text: "Approved"
+                          
+                        }
+                        
+                        
+                      ]
+
+                              
+                            ]
+                          }) }}
+
+
+
+                          {{ govukButton({
+                            text: "Visit this cohort",
+                            href: "cohort-details"
+                          }) }}
+
+            </div>
+            
+      </form>
+      </div>
+    </div>
+    </div>
+
+    </div>
+  </div>
+
+{% endblock %}

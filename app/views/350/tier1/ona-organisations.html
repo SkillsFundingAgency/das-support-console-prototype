@@ -1,0 +1,153 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Support console - Continuous improvements
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-whole">
+     
+ <form action="initial-search" method="post" class="govuk-!-margin-bottom-9">
+     
+      
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-6">ONA CONSULTING LTD
+        <span class="govuk-caption-l">Account ID XJ9NYR, created 21/10/2019</span>
+      </h1>
+        
+      
+      
+
+         
+     
+       
+     
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+           <a href="#" class="noUnder"> <div class="blueContainer">
+               <p>Organisations</p>
+            </div></a>
+            <a href="ona-finance-challenge" class="noUnder"><div class="greyContainer">
+              <p>Finance</p>
+            </div></a>
+            <a href="ona-team-members" class="noUnder"><div class="greyContainer">
+              <p>Team members</p>
+            </div></a>
+            <a href="ona-commitments" class="noUnder"><div class="greyContainer">
+              <p>Commitments</p>
+            </div></a>
+          </div>
+        
+
+    
+          <div class="govuk-grid-column-three-quarters ">
+              <div class="borderLeft">
+                <h2 class="govuk-heading-l">Organisations</h2>
+                
+                 
+                          {{ govukTable({
+                            
+                            captionClasses: "govuk-table__caption--m",
+                            firstCellIsHeader: false,
+                            head: [
+                              {
+                                text: "Account name",
+                                classes: 'govuk-!-width-one-third'
+                              },
+                              {
+                                text: "Address",
+                                classes: 'govuk-!-width-one-half'
+                              },
+                              {
+                                text: "Source"
+                              },
+                              {
+                                text: "Agreement status"
+                              }
+                            ],
+                            rows: [
+                              [
+                              
+                                {
+                                  text: "ONA CONSULTING LTD"
+                                },
+                                {
+                                  text: "Satago cottage, 360a Brighton Road, Croydon, CR2 6AL"
+                                },
+                                {
+                                  text: "Companies House"
+                                },
+                                {
+                                  html: "Pending"
+                                  
+                                }
+                                
+                              ],
+                              [
+                              
+                                {
+                                  text: "DELE LTD"
+                                },
+                                {
+                                  text: "18 Botwell Common Road, Hayes, London, Middlesex. UB3 1JA"
+                                },
+                                {
+                                  text: "Companies House"
+                                },
+                                {
+                                  html: "Pending"
+                                  
+                                }
+                                
+                              ],
+                              [
+                              
+                                {
+                                  text: "VAC LIMITED"
+                                },
+                                {
+                                  text: "Kemp House, 160 City Road, London, EC1V"
+                                },
+                                {
+                                  text: "Companies House"
+                                },
+                                {
+                                  html: "Pending"
+                                  
+                                }
+                                
+                              ],
+                              [
+                              
+                                {
+                                  text: "WAC LTD"
+                                },
+                                {
+                                  text: "28 Ahlux Court Millwright Street, Leeds, LS2 7QQ"
+                                },
+                                {
+                                  text: "Companies House"
+                                },
+                                {
+                                  html: "Pending"
+                                  
+                                }
+                                
+                              ]
+                              
+                            ]
+                          }) }}
+
+            </div>
+
+      </form>
+      </div>
+    </div>
+    </div>
+
+    </div>
+  </div>
+
+{% endblock %}

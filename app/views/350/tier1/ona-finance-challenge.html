@@ -1,0 +1,131 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Support console - Continuous improvements
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-whole">
+     
+ <form action="initial-search" method="post" class="govuk-!-margin-bottom-9">
+     
+      
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-6">ONA CONSULTING LTD
+        <span class="govuk-caption-l">Account ID XJ9NYR, created 21/10/2019</span>
+      </h1>
+        
+      
+      
+
+         
+     
+       
+     
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+           <a href="ona-organisations" class="noUnder"> <div class="greyContainer">
+               <p>Organisations</p>
+            </div></a>
+            <a href="ona-finance" class="noUnder"><div class="blueContainer">
+              <p>Finance</p>
+            </div></a>
+            <a href="ona-team-members" class="noUnder"><div class="greyContainer">
+              <p>Team members</p>
+            </div></a>
+            <a href="ona-commitments" class="noUnder"><div class="greyContainer">
+              <p>Commitments</p>
+            </div></a>
+          </div>
+        
+
+    
+          <div class="govuk-grid-column-three-quarters ">
+              <div class="borderLeft">
+                <p class="govuk-body">
+                  Finance
+                <p>
+                  <p class="govuk-body">
+                    Enter the following information to verify the caller's identity:
+                  <p>
+                    {{ govukInput({
+                      label: {
+                        text: "3rd and 4th character of a PAYE scheme (excluding the /):"
+                      },
+                      classes: "govuk-input--width-2",
+                      id: "width-2",
+                      name: "width-2"
+                    }) }}
+                    
+                    {{ govukInput({
+                      
+                      classes: "govuk-input--width-2",
+                      id: "width-2",
+                      name: "width-2"
+                    }) }}
+                 
+                    {{ govukInput({
+                      label: {
+                        text: "3rd and 4th character of a PAYE scheme (excluding the /):"
+                      },
+                      classes: "govuk-input--width-20",
+                      id: "width-20",
+                      name: "width-20"
+                    }) }}
+
+
+                    {{ govukButton({
+                      text: "Submit",
+                      href: "ona-finance"
+                    }) }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                         
+
+            </div>
+
+      </form>
+      </div>
+    </div>
+    </div>
+
+    </div>
+  </div>
+
+{% endblock %}
