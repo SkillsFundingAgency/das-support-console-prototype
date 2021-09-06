@@ -1,0 +1,253 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Support console - Continuous improvements
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-width-container">
+
+  <a href="reprint-certificate" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+    <form method="post" action="#">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Check and submit the assessment details</h1>
+        
+      <div class="govuk-inset-text">
+        <p class="govuk-body">
+          The apprentice and apprenticeship details will be printed on the certificate.
+        </p>
+      </div>
+
+  <!-- APPRENTICE DETAILS SUMMARY -->
+      <h3 class="govuk-heading-m">Apprentice details</h3>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Given name
+            </dt>
+            <dd class="govuk-summary-list__value">
+                King
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                    Change
+                </a>
+            </dd>
+
+        </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Family name
+            </dt>
+            <dd class="govuk-summary-list__value">
+                Kanth
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                    Change
+                </a>
+            </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                <abbr title="Unique learner number">ULN</abbr>
+            </dt>
+            <dd class="govuk-summary-list__value">
+                7551852222
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+        </div>
+    </dl>
+<!-- END APPRENTICE DETAILS SUMMARY -->
+
+<!-- APPRENTICESHIP DETAILS SUMMARY -->
+      <h3 class="govuk-heading-m">Apprenticeship details</h3>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Standard
+            </dt>
+            <dd class="govuk-summary-list__value">
+                Accounts / finance assistant (488)
+            </dd>
+            <dd class="govuk-summary-list__actions"></dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Level
+            </dt>
+            <dd class="govuk-summary-list__value">
+                2
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Version
+            </dt>
+            <dd class="govuk-summary-list__value">
+                <span id="Option" class="govuk-error-message field-validation-valid" data-valmsg-for="Version" data-valmsg-replace="true"></span>
+                None
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Grade
+            </dt>
+            <dd class="govuk-summary-list__value">
+                <span id="Option" class="govuk-error-message field-validation-valid" data-valmsg-for="SelectedGrade" data-valmsg-replace="true"></span>
+                Outstanding
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                    Change<span class="govuk-visually-hidden"> grade</span>
+                </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Option                   
+          </dt>
+            <dd class="govuk-summary-list__value">
+                <span id="Option" class="govuk-error-message field-validation-valid" data-valmsg-for="Option" data-valmsg-replace="true"></span>
+                None
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                
+            </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Achievement date                    
+          </dt>
+            <dd class="govuk-summary-list__value">
+                <span id="Option" class="govuk-error-message field-validation-valid" data-valmsg-for="AchievementDate" data-valmsg-replace="true"></span>
+               01/01/2019
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                    Change<span class="govuk-visually-hidden"> date</span>
+                </a>
+            </dd>
+        </div>
+    </dl>
+<!-- END APPRENTICESHIP DETAILS SUMMARY -->
+
+<!-- SENDING CERTIFICATE SUMMARY -->
+      <h3 class="govuk-heading-m">We'll send the certificate to</h3>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Certificate receiver
+            </dt>
+            <dd class="govuk-summary-list__value">
+                <span id="Name" class="govuk-error-message field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                Employer
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="certificate-receiver">
+                    Change<span class="govuk-visually-hidden"> certificate receiver</span>
+                </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+              Recepient's name
+          </dt>
+          <dd class="govuk-summary-list__value">
+              <span id="Name" class="govuk-error-message field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+              John Smith
+          </dd>
+          <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> recipient name</span>
+              </a>
+          </dd>
+      </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Department
+            </dt>
+            <dd class="govuk-summary-list__value">
+                Finance
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                    Change<span class="govuk-visually-hidden"> department</span>
+                </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Employer
+            </dt>
+            <dd class="govuk-summary-list__value">
+                    <span>Tesco Limited</span>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> employer</span>
+                    </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Address
+            </dt>
+            <dd class="govuk-summary-list__value">
+                <span>123 Test Road<br>Coventry<br>CV1 2WT</span>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                    Change<span class="govuk-visually-hidden"> employer</span>
+                </a>
+             
+                
+        </dd>
+    </div>
+<!-- END SENDING CERTIFICATE SUMMARY -->
+
+
+
+      </div>
+    </div>
+<!-- CTA -->
+{{ govukButton({
+  text: "Confirm and submit"
+}) }}
+<!-- END CTA -->
+
+      </div>
+    </div>
+
+
+
+</form>
+
+  </main>
+</div>
+
+
+{% endblock %}
