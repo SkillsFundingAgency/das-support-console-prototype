@@ -15,46 +15,75 @@
       
       </h1>
 
-      <!--main accordian STARTS-->
       
+<!--main accordian STARTS-->
+            {{ govukAccordion({
+              id: "accordion-with-summary-sections",
+              items: [
+                {
+                  heading: {
+                    text: "Certificate reprint - address "
+                  },
+                  summary: {
+                    text: "Design changes in EPAO for certifiate address mirrored for staff requesting reprint"
+                  },
+                  content: {
+                    html:
+                    ' <h2 class="govuk-heading-m">CIDES-356 Reprint issues - address</h2>
+                    <ul class="govuk-list govuk-list--bullet">
+                       
+                        <li class="govuk-!-margin-bottom-3">
+                          <a class="govuk-link" href="https://skillsfundingagency.atlassian.net/browse/CIDES-356" target="_blank">CIDES-356 Design options for reprint issue - Address (opens in a new tab)</a>
+                        </li>
+                        <li class="govuk-!-margin-bottom-3">
+                          <a class="govuk-link" href="https://lucid.app/lucidspark/b76a14aa-caa3-4047-aa1b-2d89b2d69041/edit?invitationId=inv_21b4856e-3222-4dcb-8ad3-a29fa2f92bb7#" target="_blank">Lucid board (opens in a new tab)</a>
+                        </li>
+                        <li class="govuk-!-margin-bottom-3">
+                          <a class="govuk-link" href="https://miro.com/app/board/o9J_l3VbF1c=/" target="_blank">Miro board (opens in a new tab)</a>
+                        </li>
+                        <li class="govuk-!-margin-bottom-3">
+                          <a class="govuk-link" href="356/search"><b>Start prototype</b></a>
+                        </li>
+                       
+                    </ul>'
+                  }
+                },
+                   
+                
+                {
+                  heading: {
+                    text: "Support console 2021 "
+                  },
+                  summary: {
+                    text: "Improvements made within 2021 to the console and its content"
+                  },
+                  content: {
+                    html:
+                    ' <h2 class="govuk-heading-m">CIDES-350 Create designs for Support Console</h2>
+                    <ul class="govuk-list govuk-list--bullet">
+                        
+                          
+                       
+                        <li class="govuk-!-margin-bottom-3">
+                          <a class="govuk-link" href="https://skillsfundingagency.atlassian.net/browse/CIDES-350" target="_blank">CIDES-350 Create designs for Support Console (opens in a new tab)</a>
+                        </li>
+                        <li class="govuk-!-margin-bottom-3">
+                          <a class="govuk-link" href="https://lucid.app/lucidspark/5bb0fe80-0d03-4d13-bcdb-7f124fc5891f/edit?beaconFlowId=E4515B8B81FDEDD0#" target="_blank">Lucid board (opens in a new tab)</a>
+                        </li>
+                        <li class="govuk-!-margin-bottom-3">
+                          <a class="govuk-link" href="350/tier1/initial-search"><b>Tier 1 user</b> - As-is prototype (additional question on finance page)</a>
+                        </li>
+                        <li class="govuk-!-margin-bottom-3">
+                          <a class="govuk-link" href="350/tier2/initial-search"><b>Tier 2 user</b> - As-is prototype</a>
+                        </li>
+                       
+                    </ul>'
+                  }
+                }
+                 
+              ]
+            }) }}
 
-      {{ govukAccordion({
-        id: "accordion-with-summary-sections",
-        items: [
-          {
-            heading: {
-              text: "Support console 2021 "
-            },
-            summary: {
-              text: "Improvements made within 2021 to the console and its content"
-            },
-            content: {
-              html:
-              ' <h2 class="govuk-heading-m">CIDES-350 Create designs for Support Console</h2>
-              <ul class="govuk-list govuk-list--bullet">
-                  
-                    
-                 
-                  <li class="govuk-!-margin-bottom-3">
-                    <a class="govuk-link" href="https://skillsfundingagency.atlassian.net/browse/CIDES-350" target="_blank">CIDES-350 Create designs for Support Console (opens in a new tab)</a>
-                  </li>
-                  <li class="govuk-!-margin-bottom-3">
-                    <a class="govuk-link" href="https://lucid.app/lucidspark/5bb0fe80-0d03-4d13-bcdb-7f124fc5891f/edit?beaconFlowId=E4515B8B81FDEDD0#" target="_blank">Lucid board (opens in a new tab)</a>
-                  </li>
-                  <li class="govuk-!-margin-bottom-3">
-                    <a class="govuk-link" href="350/tier1/initial-search"><b>Tier 1 user</b> - As-is prototype (additional question on finance page)</a>
-                  </li>
-                  <li class="govuk-!-margin-bottom-3">
-                    <a class="govuk-link" href="350/tier2/initial-search"><b>Tier 2 user</b> - As-is prototype</a>
-                  </li>
-                 
-              </ul>'
-            }
-          }
-                  
-           
-        ]
-      }) }}
       <!--main accordian ENDS-->
     </div>
   </div>

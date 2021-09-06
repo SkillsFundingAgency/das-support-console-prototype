@@ -1,0 +1,40 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Support console - Continuous improvements
+{% endblock %}
+
+{% block content %}
+
+<a href="#" class="govuk-back-link">Return to dashboard</a>
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-two-thirds">
+     
+
+ <form action="#" method="post">
+     
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Search</h1>
+
+      <p class="govuk-body">Search using either the:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>certificate reference number</li>
+        <li>unique learner number (ULN)</li>
+        <li>apprentice's name, or</li>
+        <li>EPAO ID</li>
+      </ul>
+
+      <div class="govuk-form-group">
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Search
+      </button>
+
+     </form>
+    </div>
+  </div>
+
+{% endblock %}
