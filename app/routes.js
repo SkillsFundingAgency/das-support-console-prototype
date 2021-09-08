@@ -64,6 +64,14 @@ router.post(`/350/tier2/uln-or-cohort`, function (req, res) {
 
 // TIER 2 ENDS
 
+router.post('/356/address-details-correct', (req, res) => {
+	if(req.session.data['address-details-correct'] == 'Yes'){
+		res.redirect('check-and-submit')
+	} else {
+		res.redirect('add-address')
+	}
+})
+    
 
 
 
