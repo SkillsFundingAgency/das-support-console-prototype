@@ -164,10 +164,10 @@ ESFA admin services
           </dt>
           <dd class="govuk-summary-list__value">
               <span id="Name" class="govuk-error-message field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
-              Joanna Smith
+              {{ data['recipient-name'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
+              <a class="govuk-link" href="edit-address">
                   Change<span class="govuk-visually-hidden"> recipient name</span>
               </a>
           </dd>
@@ -177,10 +177,10 @@ ESFA admin services
                 Department
             </dt>
             <dd class="govuk-summary-list__value">
-                Finance
+                {{ data['dept-name'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
+                <a class="govuk-link" href="edit-address">
                     Change<span class="govuk-visually-hidden"> department</span>
                 </a>
             </dd>
@@ -190,10 +190,10 @@ ESFA admin services
                 Employer
             </dt>
             <dd class="govuk-summary-list__value">
-                    <span>Tesco Limited</span>
+                {{ data['employer-name'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="#">
+                    <a class="govuk-link" href="edit-address">
                         Change<span class="govuk-visually-hidden"> employer</span>
                     </a>
             </dd>
@@ -203,10 +203,59 @@ ESFA admin services
                 Address
             </dt>
             <dd class="govuk-summary-list__value">
-                <span>123 Test Road<br>Coventry<br>CV1 2WT</span>
+                {% if data['use-this-employer-address'] === 'yes' %}
+            25 Townsville House<br>
+
+            {% elif data['use-this-employer-address-updated'] === 'yes' %}
+            {{ data['employer-address-line-one'] }}
+
+            {% else %}
+
+            {{ data['employer-address-line-one'] }}<br>
+
+            {% endif %}
+
+            <!--line one ENDS-->
+
+            <!--line two-->
+
+            {% if data['use-this-employer-address'] === 'yes' %}
+            Townsend Avenue<br>
+            
+
+            {% else %}
+
+            {{ data['employer-address-line-two'] }}<br>
+
+            {% endif %}
+
+            <!--line two ENDS-->
+
+              <!--line town-->
+
+              {% if data['use-this-employer-address'] === 'yes' %}
+              Coventry<br>
+
+              {% else %}
+
+              {{ data['employer-address-line-town'] }}<br>
+
+              {% endif %}
+
+              <!--line town ENDS-->
+                  <!--line post code-->
+
+              {% if data['use-this-employer-address'] === 'yes' %}
+              CV1 1AB<br>
+
+              {% else %}
+
+             <span class="uppercase"> {{ data['employer-address-line-post-code'] }}<br> </span>
+
+              {% endif %}
         </dd>
         <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
+                <a class="govuk-link" href="edit-address">
                     Change<span class="govuk-visually-hidden"> employer</span>
                 </a>
              
@@ -221,7 +270,7 @@ ESFA admin services
     </div>
 <!-- CTA -->
 {{ govukButton({
-  text: "Confirm and submit"
+  text: "Confirm reprint"
 }) }}
 <!-- END CTA -->
 

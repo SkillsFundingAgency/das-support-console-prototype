@@ -23,11 +23,29 @@ ESFA admin services
 
   <main class="govuk-main-wrapper">
 
-    <form method="post" action="employer-address-updated">
+    <form method="post" action="confirm-address">
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Add the address that you'd like us to send the certificate to</h1>
+
+        {{ govukInsetText({
+          html: "Add department and employer name details if sending to an employer's address. 
+          <br>This will help to deliver the certificate to the correct person."
+        }) }}
+        
+        
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="two-thirds">
+            Recipient's name 
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="recipient-name" type="text" value=""></div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="two-thirds">
+              Department name (optional)
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="dept-name" type="text" value=""></div>
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="two-thirds">
@@ -35,17 +53,7 @@ ESFA admin services
           </label>
           <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="employer-name" type="text" value=""></div>
 
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="two-thirds">
-              Department name (optional)
-            </label>
-            <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="employer-name" type="text" value=""></div>
   
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="two-thirds">
-                Recipient's name 
-              </label>
-              <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="employer-name" type="text" value=""></div>
   
         <div class="govuk-form-group">
           <label class="govuk-label" for="full">
