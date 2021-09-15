@@ -34,10 +34,16 @@ ESFA admin services
         </tbody>
       </table>
 
+      <h2 class="govuk-heading-m">Are you sure this certifiate needs reprinting?</h2>
 
-{{ govukInsetText({
-  text: "You will be able to check and amend details before requesting the duplicate."
-}) }}
+      <p class="govuk-body">The status of this certificate is: <b>Printed</b></p>    
+      
+      <p class="govuk-body">We haven't received this certificate's delivery receipt yet.</p>     
+      
+      {{ govukInsetText({
+        text: "You will be able to check and amend details before requesting the duplicate."
+      }) }}
+      
       
     <form action="certificate-address" method="post">
       <button class="govuk-button" data-module="govuk-button">

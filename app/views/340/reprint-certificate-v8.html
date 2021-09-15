@@ -1,0 +1,98 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+ESFA admin services
+{% endblock %}
+
+{% block content %}
+
+<a href="#" class="govuk-back-link">Search again</a>
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-two-thirds">
+     
+
+     
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Request a duplicate certificate</h1>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-third">Certificate number</th>
+            <td class="govuk-table__cell">00011742</td>
+          </tr>
+        </thead>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Apprentice name</th>
+          <td class="govuk-table__cell">King Kanth</td>
+        </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">ULN</th>
+            <td class="govuk-table__cell">7551852222</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="govuk-heading-m">Are you sure this certifiate needs reprinting?</h2>
+
+      <p class="govuk-body">The status of this certificate is: <b>Printed</b></p>    
+      
+      <p class="govuk-body">We haven't received this certificate's delivery receipt yet.</p>    
+      
+      <h2 class="govuk-heading-m">Reason for request</h2>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                Certificate not received
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                Incorrect address
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                Incorrect apprentice details
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                Incorrect apprenticeship details
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                Lost by receiver
+              </label>
+            </div>
+            
+      
+        </fieldset>
+      </div>
+
+      
+      {{ govukInsetText({
+        text: "You will be able to check and amend details before requesting the duplicate."
+      }) }}
+      
+      
+    <form action="certificate-address" method="post">
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+    
+    </div>
+  </div>
+
+{% endblock %}
