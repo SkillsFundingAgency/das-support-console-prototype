@@ -104,6 +104,17 @@ ESFA admin services
 <!-- certificate status END -->
 
 <!-- reason for request START -->
+{% set otherHtml %}
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "Can you provide more detail?"
+  }
+}) }}
+{% endset -%}
+
 {{ govukRadios({
   idPrefix: "where-do-you-live",
   name: "where-do-you-live",
@@ -140,11 +151,26 @@ ESFA admin services
     },
     {
       text: "Other",
-      value: "other"
+      value: "other",
+      conditional: {
+        html: otherHtml
+      }
     }
   ]
 }) }}
 <!-- reason for request END -->
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 {{ govukInsetText({
