@@ -151,17 +151,17 @@ ESFA admin services
   },
   items: [
     {
-      text: "Certificate not received",
+      text: "Delivery failed",
       value: "certificate-not-received",
       conditional: {
         html: NotReceivedHtml
       }
     },
     {
-      text: "Incorrect address",
-      value: "incorrect-address",
+      text: "Apprentice moved to different employer or no longer with employer",
+      value: "incorrect-apprentice-details",
       conditional: {
-        html: IncorrectAddressHtml
+        html: IncorrectApprenticeDetailsHtml
       }
     },
     {
@@ -169,6 +169,20 @@ ESFA admin services
       value: "incorrect-apprentice-details",
       conditional: {
         html: IncorrectApprenticeDetailsHtml
+      }
+    },
+    {
+      text: "Incorrect apprentice address",
+      value: "incorrect-address",
+      conditional: {
+        html: IncorrectAddressHtml
+      }
+    },
+    {
+      text: "Incorrect employer address",
+      value: "incorrect-address",
+      conditional: {
+        html: IncorrectAddressHtml
       }
     },
     {
