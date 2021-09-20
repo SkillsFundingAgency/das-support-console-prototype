@@ -14,39 +14,10 @@ ESFA admin services
           
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Are you sure this certificate needs reprinting?</h1>
 
-<!-- certificate details START -->
-<!-- {{ govukTable({
-  firstCellIsHeader: true,
-  rows: [
-    [
-      {
-        text: "Certificate number"
-      },
-      {
-        text: "00011742"
-      }
-    ],
-    [
-      {
-        text: "Apprentice name"
-      },
-      {
-        text: "King Kanth"
-      }
-    ],
-    [
-      {
-        text: "ULN"
-      },
-      {
-        text: "7551852222"
-      }
-    ]
-  ]
-}) }} -->
-
-<!-- certificate details END -->
-
+      {{ govukInsetText({
+        text: "Do not request certificates with a status of 'sent to printer' or 'printed'; you will need to wait until the status changes to 'delivered' or 'not delivered'."
+      }) }}
+      
 <!-- certificate status START -->
 {{ govukTable({
   firstCellIsHeader: true,
@@ -80,44 +51,94 @@ ESFA admin services
         text: "Certificate status"
       },
       {
-        text: "Delivered"
+        text: "Sent to printer"
       }
     ],
     [
       {
-        text: "Date delivered"
+        text: "Date sent to printer"
       },
       {
-        text: "06/09/2021 16:52"
-      }
-    ],
-    [
-      {
-        text: "Delivered to"
-      },
-      {
-        html: "Joanna Smith<br>1 Town Road<br> Coventry<br>CV1 1AB"
+        text: "06/09/2021 16:52:03"
       }
     ]
   ]
 }) }}
 <!-- certificate status END -->
 
+<p class="govuk-body govuk-!-margin-bottom-9"></p>
+
 <!-- reason for request START -->
+
+{% set NotReceivedHtml %}
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "Provide more detail"
+  }
+}) }}
+{% endset -%}
+
+{% set IncorrectAddressHtml %}
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "Provide more detail"
+  }
+}) }}
+{% endset -%}
+
+{% set IncorrectApprenticeDetailsHtml %}
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "Provide more detail"
+  }
+}) }}
+{% endset -%}
+
+{% set IncorrectApprenticeshipDetailsHtml %}
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "Provide more detail"
+  }
+}) }}
+{% endset -%}
+
+{% set LostDamagedHtml %}
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "Provide more detail"
+  }
+}) }}
+{% endset -%}
+
 {% set otherHtml %}
 {{ govukCharacterCount({
   name: "with-hint",
   id: "with-hint",
   maxlength: 200,
   label: {
-    text: "Can you provide more detail?"
+    text: "Provide more detail"
   }
 }) }}
 {% endset -%}
 
 {{ govukRadios({
-  idPrefix: "where-do-you-live",
-  name: "where-do-you-live",
+  idPrefix: "reprint-reason",
+  name: "reprint-reason",
   fieldset: {
     legend: {
       text: "Reason for requesting a duplicate certificate",
@@ -125,26 +146,44 @@ ESFA admin services
       classes: "govuk-fieldset__legend--m"
     }
   },
+  hint: {
+    text: "By giving accurate reasons you will be helping us to improve this service."
+  },
   items: [
     {
       text: "Certificate not received",
-      value: "certificate-not-received"
+      value: "certificate-not-received",
+      conditional: {
+        html: NotReceivedHtml
+      }
     },
     {
       text: "Incorrect address",
-      value: "incorrect-address"
+      value: "incorrect-address",
+      conditional: {
+        html: IncorrectAddressHtml
+      }
     },
     {
       text: "Incorrect apprentice details",
-      value: "incorrect-apprentice-details"
+      value: "incorrect-apprentice-details",
+      conditional: {
+        html: IncorrectApprenticeDetailsHtml
+      }
     },
     {
       text: "Incorrect apprenticeship details",
-      value: "incorrect-apprenticeship-details"
+      value: "incorrect-apprenticeship-details",
+      conditional: {
+        html: IncorrectApprenticeshipDetailsHtml
+      }
     },
     {
-      text: "Lost by receiver",
-      value: "lost-by-receiver"
+      text: "Lost or damaged by receiver",
+      value: "lost-damaged-by-receiver",
+      conditional: {
+        html: LostDamagedHtml
+      }
     },
     {
       divider: "or"
@@ -159,25 +198,8 @@ ESFA admin services
   ]
 }) }}
 <!-- reason for request END -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{{ govukInsetText({
-  text: "You will be able to check and amend details before requesting the duplicate."
-}) }}
       
-    <form action="certificate-address" method="post">
+    <form action="check-and-submit" method="post">
       <button class="govuk-button" data-module="govuk-button">
         Continue
       </button>

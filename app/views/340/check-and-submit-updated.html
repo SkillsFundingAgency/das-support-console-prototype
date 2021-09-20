@@ -165,7 +165,7 @@ ESFA admin services
           <dd class="govuk-summary-list__value">
               <span id="Name" class="govuk-error-message field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
 
-            Joanna Smith
+              {{ data['recipient-name'] }}
 
           </dd>
           <dd class="govuk-summary-list__actions">
@@ -180,7 +180,7 @@ ESFA admin services
             </dt>
             <dd class="govuk-summary-list__value">
 
-            Human Resources
+            {{ data['dept-name'] }}
 
             </dd>
             <dd class="govuk-summary-list__actions">
@@ -195,8 +195,8 @@ ESFA admin services
             </dt>
             <dd class="govuk-summary-list__value">
 
-            ONA Consulting Limited
-
+            {{ data['employer-name'] }}
+            
             </dd>
             <dd class="govuk-summary-list__actions">
                     <a class="govuk-link" href="edit-address">
@@ -210,10 +210,10 @@ ESFA admin services
             </dt>
             <dd class="govuk-summary-list__value">
 
-                25 Townsville House<br>
-                Townsend Avenue<br>
-                Coventry<br>
-                CV1 1AB
+                {{ data['employer-address-line-one'] }}<br>
+                 {{ data['employer-address-line-two'] }}<br>
+                 {{ data['employer-address-line-town'] }}<br>
+                 <span class="uppercase"> {{ data['employer-address-line-post-code'] }} </span>
                 
               
         </dd>
