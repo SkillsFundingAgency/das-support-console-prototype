@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  ESFA admin services
+{% endblock %}
+
+{% block main %}
+
+
+{% block content %}
+
+
+
+<div class="govuk-width-container">
+  {{ govukPhaseBanner({
+    tag: {
+      text: "prototype"
+    },
+    html: 'This is not a real service.'
+  }) }}
+
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+    <form method="post" action="check-and-submit-updated">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">What grade did the apprentice achieve?</h1>
+
+        
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              You are not expected to record partial elements or course withdrawals
+            </strong>
+          </div>
+
+
+          {{ govukRadios({
+            idPrefix: "grade",
+            name: "grade",
+            fieldset: {
+              legend: {
+                isPageHeading: true
+              }
+            },
+            items: [
+              {
+                value: "Pass",
+                text: "Pass"
+              },
+              {
+                value: "Credit",
+                text: "Credit"
+              },
+              {
+                value: "Merit",
+                text: "Merit"
+              },
+              {
+                value: "Distinction",
+                text: "Distinction"
+              },
+              {
+                value: "Pass with excellence",
+                text: "Pass with excellence"
+              },
+              {
+                value: "Outstanding",
+                text: "Outstanding"
+              },
+              {
+                value: "No grade awarded",
+                text: "No grade awarded"
+              }
+            ]
+          }) }}
+
+<!-- CTA -->
+{{ govukButton({
+  text: "Continue"
+}) }}
+<!-- END CTA -->
+
+</form>
+
+  </main>
+</div>
+
+
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  ESFA admin services
+{% endblock %}
+
+{% block main %}
+
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  {{ govukPhaseBanner({
+    tag: {
+      text: "prototype"
+    },
+    html: 'This is not a real service.'
+  }) }}
+
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+    <form method="post" action="check-and-submit-updated">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">What is the apprenticeship achievement date?</h1>
+      </div>
+    </div>
+
+<!-- DATE INPUT -->
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <div id="passport-issued-hint" class="govuk-hint">
+      For example, 15 10 2017
+    </div>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric" value="01"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric" value="01"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric" value="2019"></div>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+<!-- END DATE INPUT -->
+
+<!-- CTA -->
+{{ govukButton({
+  text: "Continue"
+}) }}
+<!-- END CTA -->
+
+</form>
+
+  </main>
+</div>
+
+{% endblock %}
+{% endblock %}
