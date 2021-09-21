@@ -1,0 +1,111 @@
+
+{% extends "layout-to-be.html" %}
+
+{% block pageTitle %}
+  Support console - Continuous improvements
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-two-thirds">
+     
+ <form action="initial-search" method="post" class="govuk-!-margin-bottom-9">
+     
+      
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Search</h1>
+
+      <div class="govuk-form-group">
+       <!--search input STARTS-->
+        <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-30" id="initial-search-criteria" name="initial-search-criteria" type="text" spellcheck="false" value="{{ data['initial-search-criteria'] }}">
+          <button data-module="govuk-button" class="no-button"><div class="govuk-input__suffix" aria-hidden="true"></div></button>
+        </div>
+      </div>
+       <!--search input ENDS-->
+
+          <!--radio selection STARTS-->
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          idPrefix: "initial-search",
+          name: "initial-search",
+          fieldset: {
+            legend: {
+              text: " ",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+         
+          items: [
+            {
+              value: "users",
+              text: "Users",
+              checked: "true"
+            },
+            {
+              value: "accounts",
+              text: "Accounts"
+            }
+          ]
+        }) }}
+        <a href="initial-search" class="govuk-link">Clear search</a>
+         <!--radio selection ENDS-->
+     </form>
+
+     <h2 class="govuk-heading-m govuk-!-margin-bottom-6">Results</h2>
+
+    <p class="govuk-body">
+      1 users found
+    <p>
+
+
+    
+    </div>
+  </div>
+
+        {{ govukTable({
+          
+          captionClasses: "govuk-table__caption--m",
+          firstCellIsHeader: false,
+          head: [
+            {
+              text: "Name"
+            },
+            {
+              text: "Email"
+            },
+            {
+              text: "Status"
+            },
+            {
+              text: ""
+            }
+          ],
+          rows: [
+            [
+             
+              {
+                text: "Test User"
+              },
+              {
+                text: "testuser@test.com"
+              },
+              {
+                text: "Active"
+              },
+              {
+                html: "<a href=user-summary>view</a>"
+                
+              }
+            ]
+          ]
+        }) }}
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

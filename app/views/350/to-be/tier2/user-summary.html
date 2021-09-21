@@ -1,0 +1,99 @@
+
+{% extends "layout-to-be.html" %}
+
+{% block pageTitle %}
+  Support console - Continuous improvements
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-whole">
+     
+ <form action="initial-search" method="post" class="govuk-!-margin-bottom-9">
+     
+      
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Test User testuser@test.com</h1>
+
+      
+      
+
+         
+     
+       
+     
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <div class="blueContainer">
+               <p>Overview</p>
+            </div>
+          </div>
+        
+
+    
+          <div class="govuk-grid-column-three-quarters ">
+              <div class="borderLeft">
+                <h2 class="govuk-heading-l">User overview</h2>
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-half">
+                  <h3 class="govuk-heading-s">Name</h3>
+                  <h3 class="govuk-heading-s">Name</h3>
+                  <h3 class="govuk-heading-s">Name</h3>
+                </div>
+                <div class="govuk-grid-column-one-half govuk-!-margin-bottom-9">
+                  <p class="govuk-body">Test User</p>
+                  <p class="govuk-body"><a href="#">testuser@test.com</a></p>
+                  <p class="govuk-body">Active</p>
+                </div>
+                <hr >
+                </div >
+                 <h3 class="govuk-heading-m govuk-!-margin-top-9">Test User testuser@test.com can access</h3>
+                          {{ govukTable({
+                            
+                            captionClasses: "govuk-table__caption--m",
+                            firstCellIsHeader: false,
+                            head: [
+                              {
+                                text: "Account name"
+                              },
+                              {
+                                text: " "
+                              },
+                              {
+                                text: " "
+                              },
+                              {
+                                text: ""
+                              }
+                            ],
+                            rows: [
+                              [
+                              
+                                {
+                                  text: "ONA CONSULTING LTD"
+                                },
+                                {
+                                  text: " "
+                                },
+                                {
+                                  text: " "
+                                },
+                                {
+                                  html: "<a href=ona-organisations>view</a>"
+                                  
+                                }
+                              ]
+                            ]
+                          }) }}
+
+            </div>
+
+      </form>
+      </div>
+    </div>
+    </div>
+
+    </div>
+  </div>
+
+{% endblock %}

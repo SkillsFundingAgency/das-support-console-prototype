@@ -1,0 +1,173 @@
+
+{% extends "layout-to-be.html" %}
+
+{% block pageTitle %}
+  Support console - Continuous improvements
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-two-thirds">
+     
+ <form action="initial-search" method="post" class="govuk-!-margin-bottom-9">
+     
+      
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Search</h1>
+
+      <div class="govuk-form-group">
+       <!--search input STARTS-->
+        <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-30" id="initial-search-criteria" name="initial-search-criteria" type="text" spellcheck="false" value="{{ data['initial-search-criteria'] }}">
+          <button data-module="govuk-button" class="no-button"><div class="govuk-input__suffix" aria-hidden="true"></div></button>
+        </div>
+      </div>
+       <!--search input ENDS-->
+
+          <!--radio selection STARTS-->
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          idPrefix: "initial-search",
+          name: "initial-search",
+          fieldset: {
+            legend: {
+              text: " ",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+         
+          items: [
+            {
+              value: "users",
+              text: "Users"
+            },
+            {
+              value: "accounts",
+              text: "Accounts",
+              checked: "true"
+            }
+          ]
+        }) }}
+        <a href="initial-search" class="govuk-link">Clear search</a>
+         <!--radio selection ENDS-->
+     </form>
+
+     <h2 class="govuk-heading-m govuk-!-margin-bottom-6">Results</h2>
+
+    <p class="govuk-body">
+      6 accounts found
+    <p>
+
+
+    
+    </div>
+  </div>
+
+        {{ govukTable({
+          
+          captionClasses: "govuk-table__caption--m",
+          firstCellIsHeader: false,
+          head: [
+            {
+              text: "Account"
+            },
+            
+            {
+              text: "Account ID"
+            },
+            {
+              text: ""
+            }
+          ],
+          rows: [
+            [
+             
+              {
+                text: "ONA CONSULTING"
+              },
+              {
+                text: "XJ9NYR"
+              },
+              {
+                html: "<a href=ona-organisations>view</a>"
+                
+              }
+            ],
+            [
+             
+              {
+                text: "DIGITAL 1 CONSULTING LIMITED"
+              },
+              {
+                text: "WJJYLK"
+              },
+              {
+                html: "<a href=>view</a>"
+                
+              }
+            ],
+            [
+             
+              {
+                text: "GOLEM CONSULTING LIMITED"
+              },
+              {
+                text: "JRJ7JR"
+              },
+              {
+                html: "<a href=>view</a>"
+                
+              }
+            ],
+            [
+             
+              {
+                text: "NOV CONSULTING LIMITED"
+              },
+              {
+                text: "JJ8YLX"
+              },
+              {
+                html: "<a href=>view</a>"
+                
+              }
+            ],
+            [
+             
+              {
+                text: "RAJ & CO. CONSULTING LIMITED"
+              },
+              {
+                text: "MM7GDB"
+              },
+              {
+                html: "<a href=>view</a>"
+                
+              }
+            ],
+            [
+             
+              {
+                text: "SLE CONSULTING SERVICES LIMITED"
+              },
+              {
+                text: "W8VLGV"
+              },
+              {
+                html: "<a href=>view</a>"
+                
+              }
+            ]
+            
+            
+          ]
+        }) }}
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,251 @@
+
+{% extends "layout-to-be.html" %}
+
+{% block pageTitle %}
+  Support console - Continuous improvements
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-whole">
+     
+ <form action="initial-search" method="post" class="govuk-!-margin-bottom-9">
+     
+      
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-6">ONA CONSULTING LTD
+        <span class="govuk-caption-l">Account ID XJ9NYR, created 21/10/2019</span>
+      </h1>
+        
+      <span class="govuk-caption-l govuk-!-margin-bottom-6">
+        Levy status {{ govukTag({
+          text: "levy"
+        }) }}
+      </span>
+      
+
+         
+     
+       
+     
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+           <a href="ona-organisations" class="noUnder"> <div class="greyContainer">
+               <p>Organisations</p>
+            </div></a>
+            <a href="ona-finance" class="noUnder"><div class="blueContainer">
+              <p>Finance</p>
+            </div></a>
+            <a href="ona-team-members" class="noUnder"><div class="greyContainer">
+              <p>Team members</p>
+            </div></a>
+            <a href="ona-commitments" class="noUnder"><div class="greyContainer">
+              <p>Commitments</p>
+            </div></a>
+          </div>
+        
+
+    
+          <div class="govuk-grid-column-three-quarters ">
+              <div class="borderLeft">
+                <h2 class="govuk-heading-l">Finance</h2>
+                
+                 
+              <!--content for tabs START-->
+
+              {% set pastDayHtml %}
+
+                  {{ govukTable({
+                    head: [
+                      {
+                        text: "PAYE ref"
+                      },
+                      {
+                        text: "Name"
+                      },
+                      {
+                        text: "Date added"
+                      },
+                      {
+                        text: ""
+                      }
+                    ],
+                    rows: [
+                      [
+                        {
+                          text: "0**/*****3"
+                        },
+                        {
+                          text: ""
+                        },
+                        {
+                          text: "10/21/2019 10:48:43 AM"
+                        },
+                        {
+                          html: "<a href=ona-finance-transactions>view</a>"
+                        }
+                      ],
+                      [
+                        {
+                          text: "1**/*****4"
+                        },
+                        {
+                          text: "End to End Scenario for proto_Test"
+                        },
+                        {
+                          text: "7/18/2020 9:38:03 AM"
+                        },
+                        {
+                          html: "<a href=ona-finance-transactions-alt>view</a>"
+                        }
+                      ]
+                    ]
+                  }) }}
+                  {% endset -%}
+
+                  {% set pastWeekHtml %}
+
+                  <div class="data__purple-block govuk-!-margin-bottom-6">
+                    <span class="data-item bold-xlarge">£246,992.30</span><br>
+                    <span class="data-item bold-xsmall">Current balance</span>
+                  </div>
+
+
+                  {{ govukTable({
+                    head: [
+                      {
+                        text: "Payment date"
+                      },
+                      {
+                        text: "Description"
+                      },
+                      {
+                        text: "Amount"
+                      }
+                    ],
+                    rows: [
+                      [
+                        {
+                          text: "23/07/2020"
+                        },
+                        {
+                          text: "Levy"
+                        },
+                        {
+                          text: "£10,998.90"
+                        }
+                      ],
+                      [
+                        {
+                          text: "17/07/2020"
+                        },
+                        {
+                          text: "Transfer received from"
+                        },
+                        {
+                          text: "-£10,000.00"
+                        }
+                      ],
+                      [
+                        {
+                          text: "17/07/2020"
+                        },
+                        {
+                          text: "Transfer received from"
+                        },
+                        {
+                          text: "-£10,000.00"
+                        }
+                      ],
+                      [
+                        {
+                          text: "17/07/2020"
+                        },
+                        {
+                          text: "Training provider - name not recognised"
+                        },
+                        {
+                          text: "-£10,000.00"
+                        }
+                      ]
+                    ]
+                  }) }}
+                  {% endset -%}
+
+                   <!--content for tabs END-->
+
+                  <!--tabs START-->
+
+                      {{ govukTabs({
+                        items: [
+                          {
+                            label: "PAYE schemes",
+                            id: "past-day",
+                            panel: {
+                              html: pastDayHtml
+                            }
+                          },
+                          {
+                            label: "Transactions",
+                            id: "past-week",
+                            panel: {
+                              html: pastWeekHtml
+                            }
+                          
+                          }
+                        ]
+                      }) }}
+
+
+                       <!--tabs END-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                         
+
+            </div>
+
+      </form>
+      </div>
+    </div>
+    </div>
+
+    </div>
+  </div>
+
+{% endblock %}
