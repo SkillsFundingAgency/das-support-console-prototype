@@ -35,7 +35,20 @@ ESFA admin services
                 Given name
             </dt>
             <dd class="govuk-summary-list__value">
+                
+                {% if data['given-name'] %}
+                
+                {{ data['given-name'] }}
+    
+                {% else %}
+    
                 King
+    
+                {% endif %}
+
+
+
+
             </dd>
             <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="edit-given-name">
@@ -50,7 +63,15 @@ ESFA admin services
                 Family name
             </dt>
             <dd class="govuk-summary-list__value">
+                {% if data['family-name'] %}
+                
+                {{ data['family-name'] }}
+    
+                {% else %}
+    
                 Kanth
+    
+                {% endif %}
             </dd>
             <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="edit-family-name">
@@ -102,7 +123,7 @@ ESFA admin services
             </dt>
             <dd class="govuk-summary-list__value">
                 <span id="Option" class="govuk-error-message field-validation-valid" data-valmsg-for="Version" data-valmsg-replace="true"></span>
-                None
+                1.0
             </dd>
             <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="edit-version">
@@ -144,7 +165,7 @@ ESFA admin services
           </dt>
             <dd class="govuk-summary-list__value">
                 <span id="Option" class="govuk-error-message field-validation-valid" data-valmsg-for="AchievementDate" data-valmsg-replace="true"></span>
-               01/01/2019
+                01 March 2021
             </dd>
             <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="edit-achievement-date">
@@ -168,7 +189,15 @@ ESFA admin services
           <dd class="govuk-summary-list__value">
               <span id="Name" class="govuk-error-message field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
 
+              {% if data['recipient-name'] %}
+                
               {{ data['recipient-name'] }}
+  
+              {% else %}
+  
+              Joanna Smith
+  
+              {% endif %}
 
           </dd>
           <dd class="govuk-summary-list__actions">
@@ -183,7 +212,18 @@ ESFA admin services
             </dt>
             <dd class="govuk-summary-list__value">
 
-            {{ data['dept-name'] }}
+                {% if data['dept-name'] %}
+                
+                {{ data['dept-name'] }}
+
+                {% elif data['dept-name'] === '' %}
+
+    
+                {% else %}
+    
+                Human Resources
+    
+                {% endif %}
 
             </dd>
             <dd class="govuk-summary-list__actions">
@@ -198,7 +238,17 @@ ESFA admin services
             </dt>
             <dd class="govuk-summary-list__value">
 
-            {{ data['employer-name'] }}
+                {% if data['employer-name'] %}
+                
+                {{ data['employer-name'] }}
+
+                {% elif data['employer-name'] === '' %}
+    
+                {% else %}
+    
+                ONA Consulting Limited
+    
+                {% endif %}
             
             </dd>
             <dd class="govuk-summary-list__actions">
@@ -213,16 +263,59 @@ ESFA admin services
             </dt>
             <dd class="govuk-summary-list__value">
 
-                {{ data['employer-address-line-one'] }}<br>
-                 {{ data['employer-address-line-two'] }}<br>
-                 {{ data['employer-address-line-town'] }}<br>
-                 <span class="uppercase"> {{ data['employer-address-line-post-code'] }} </span>
+                <!-- line 1 -->
+                {% if data['employer-address-line-one'] %}
                 
+                {{ data['employer-address-line-one'] }}<br>
+    
+                {% else %}
+    
+                25 Townsville House<br>
+    
+                {% endif %}
+                <!-- end line 1 -->
+
+                <!-- line 2 -->
+                {% if data['employer-address-line-two'] %}
+                
+                {{ data['employer-address-line-two'] }}<br>
+    
+                {% else %}
+    
+                Townsend Avenue<br>
+    
+                {% endif %}
+                <!-- end line 2 -->
+
+                <!-- line town -->
+                {% if data['employer-address-line-town'] %}
+                
+                {{ data['employer-address-line-town'] }}<br>
+    
+                {% else %}
+    
+                Coventry<br>
+    
+                {% endif %}
+                <!-- end town -->
+
+                <!-- line postcode -->
+                {% if data['employer-address-line-post-code'] %}
+                
+                <span class="uppercase"> {{ data['employer-address-line-post-code'] }} </span>
+    
+                {% else %}
+    
+                CV1 1AB
+    
+                {% endif %}
+                <!-- end postcode -->                
+
               
         </dd>
         <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="edit-address">
-                    Change<span class="govuk-visually-hidden"> employer</span>
+                    Change<span class="govuk-visually-hidden"> address</span>
                 </a>
              
                 

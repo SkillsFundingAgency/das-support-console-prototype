@@ -27,8 +27,6 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">What is the apprenticeship achievement date?</h1>
-      </div>
-    </div>
 
 <!-- DATE INPUT -->
 <div class="govuk-form-group">
@@ -38,31 +36,47 @@
     </div>
     <div class="govuk-date-input" id="passport-issued">
       <div class="govuk-date-input__item">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-            Day
-          </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric" value="01"></div>
-      </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-3" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric" value="01"></div>
+        </div>
+  
       <div class="govuk-date-input__item">
         <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
             Month
           </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric" value="01"></div>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-3" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric" value="03"></div>
       </div>
+
       <div class="govuk-date-input__item">
         <div class="govuk-form-group">
           <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
             Year
           </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric" value="2019"></div>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric" value="2021"></div>
       </div>
     </div>
 
   </fieldset>
 </div>
 <!-- END DATE INPUT -->
+
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<!-- REASON FOR CHANGE -->
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--m" for="ReasonForChange">
+      Reason for change
+  </label>
+  <span class="govuk-hint">Provide more detail as to why this change is required.</span>
+  <textarea class="govuk-textarea" rows="5" name="ReasonForChange" id="ReasonForChange"></textarea>
+</div>
+<!-- END REASON FOR CHANGE -->
 
 <!-- CTA -->
 {{ govukButton({

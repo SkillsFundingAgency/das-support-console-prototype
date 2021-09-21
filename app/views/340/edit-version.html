@@ -48,7 +48,8 @@
             items: [
               {
                 value: "version-1.0",
-                text: "Version 1.0"
+                text: "Version 1.0",
+                checked: "checked"
               },
               {
                 value: "version-1.1",
@@ -61,6 +62,18 @@
             ]
           }) }}
 
+          <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+          <!-- REASON FOR CHANGE -->
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="ReasonForChange">
+                Reason for change
+            </label>
+            <span class="govuk-hint">Provide more detail as to why this change is required.</span>
+            <textarea class="govuk-textarea" rows="5" name="ReasonForChange" id="ReasonForChange"></textarea>
+          </div>
+          <!-- END REASON FOR CHANGE -->
+          
 <!-- CTA -->
 {{ govukButton({
   text: "Continue"

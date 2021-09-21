@@ -23,7 +23,7 @@
 
   <main class="govuk-main-wrapper">
 
-    <form method="post" action="check-and-submit-updated">
+    <form method="post" action="check-and-submit">
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -70,7 +70,8 @@
               },
               {
                 value: "Outstanding",
-                text: "Outstanding"
+                text: "Outstanding",
+                checked: "checked"
               },
               {
                 value: "No grade awarded",
@@ -79,6 +80,19 @@
             ]
           }) }}
 
+
+          <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+          <!-- REASON FOR CHANGE -->
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="ReasonForChange">
+                Reason for change
+            </label>
+            <span class="govuk-hint">Provide more detail as to why this change is required.</span>
+            <textarea class="govuk-textarea" rows="5" name="ReasonForChange" id="ReasonForChange"></textarea>
+          </div>
+          <!-- END REASON FOR CHANGE -->
+          
 <!-- CTA -->
 {{ govukButton({
   text: "Continue"

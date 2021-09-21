@@ -37,8 +37,20 @@
           <span class="govuk-hint">
             For example, Karla
         </span>
-          <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="recipient-name" type="text" value="King"></div>                
+          <input class="govuk-input govuk-!-width-two-thirds" id="given-name" name="given-name" type="text" value="King"></div>                
 
+          <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+          <!-- REASON FOR CHANGE -->
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="ReasonForChange">
+                Reason for change
+            </label>
+            <span class="govuk-hint">Provide more detail as to why this change is required.</span>
+            <textarea class="govuk-textarea" rows="5" name="ReasonForChange" id="ReasonForChange"></textarea>
+          </div>
+          <!-- END REASON FOR CHANGE -->
+          
 
 <!-- CTA -->
 {{ govukButton({
