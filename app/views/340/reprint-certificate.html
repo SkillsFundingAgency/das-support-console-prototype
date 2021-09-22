@@ -12,6 +12,8 @@ ESFA admin services
   <div class="govuk-grid-row govuk-!-margin-top-6">
     <div class="govuk-grid-column-two-thirds">
           
+      <form action="check-and-submit" method="post" novalidate data-validate='error-state-validation'>
+
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Are you sure this certificate needs reprinting?</h1>
 
       {{ govukInsetText({
@@ -213,11 +215,23 @@ ESFA admin services
 }) }}
 <!-- reason for request END -->
       
-    <form action="check-and-submit" method="post">
       <button class="govuk-button" data-module="govuk-button">
         Continue
       </button>
     </form>
+    
+    <script type="application/json" id="error-state-validation">
+      { 		  	
+           "reprint-reason": {
+          "presence": {
+            "message": "^Select a reason and provide more details"
+          }
+        }
+      }
+    </script>
+    
+      </main>
+    </div>
     
     </div>
   </div>
