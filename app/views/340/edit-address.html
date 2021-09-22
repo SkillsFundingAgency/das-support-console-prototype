@@ -23,10 +23,11 @@
 
   <main class="govuk-main-wrapper">
 
-    <form method="post" action="check-and-submit-updated">
-
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
+
+    <form method="post" action="check-and-submit-updated" novalidate data-validate='error-state-validation'>
+
         <h1 class="govuk-heading-xl">Edit the address that you'd like us to send the certificate to</h1>
 
         {{ govukInsetText({
@@ -82,11 +83,14 @@
 
 <!-- REASON FOR CHANGE -->
 <div class="govuk-form-group">
-  <label class="govuk-label govuk-label--m" for="ReasonForChange">
-      Reason for change
-  </label>
-  <span class="govuk-hint">Provide more detail as to why this change is required.</span>
-  <textarea class="govuk-textarea" rows="5" name="ReasonForChange" id="ReasonForChange"></textarea>
+  <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+    Reason for change
+    </label>
+  </h2>
+  <div id="more-detail-hint" class="govuk-hint">
+    Provide more detail as to why this change is required.
+  </div>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
 </div>
 <!-- END REASON FOR CHANGE -->
 
@@ -97,6 +101,16 @@
 <!-- END CTA -->
 
 </form>
+
+<script type="application/json" id="error-state-validation">
+  { 		  	
+       "more-detail": {
+      "presence": {
+        "message": "^Enter a reason"
+      }
+    }
+  }
+</script>
 
   </main>
 </div>

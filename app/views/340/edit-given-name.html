@@ -23,7 +23,7 @@
 
   <main class="govuk-main-wrapper">
 
-    <form method="post" action="check-and-submit-updated">
+    <form method="post" action="check-and-submit-updated" novalidate data-validate='error-state-validation'>
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -59,6 +59,16 @@
 <!-- END CTA -->
 
 </form>
+
+<script type="application/json" id="error-state-validation">
+  { 		  	
+       "ReasonForChange": {
+      "presence": {
+        "message": "^Enter a reason"
+      }
+    }
+  }
+</script>
 
   </main>
 </div>
