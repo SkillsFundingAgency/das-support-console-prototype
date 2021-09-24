@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+ESFA admin services
+{% endblock %}
+
+{% block main %}
+
+
+{% block content %}
+
+
+
+<div class="govuk-width-container">
+  {{ govukPhaseBanner({
+    tag: {
+      text: "prototype"
+    },
+    html: 'This is not a real service.'
+  }) }}
+
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+    <form method="post" action="confirm-address">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Add the address that you'd like us to send the certificate to</h1>
+
+        {{ govukInsetText({
+          html: "Add department and employer name details if sending to an employer's address. 
+          <br>This will help to deliver the certificate to the correct person."
+        }) }}
+        
+        
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="two-thirds">
+            Recipient's name 
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="recipient-name" type="text" value=""></div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="two-thirds">
+              Department name (optional)
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="dept-name" type="text" value=""></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="two-thirds">
+            Employer name (optional)
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="employer-name" type="text" value=""></div>
+
+  
+  
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="full">
+            Building and street
+          </label>
+          <input class="govuk-input govuk-!-width-full" id="employer-address-line-one" name="employer-address-line-one" type="text" value=""></div>
+
+        <div class="govuk-form-group">
+          <input class="govuk-input govuk-!-width-full" id="employer-address-line-two" name="employer-address-line-two" type="text" value=""></div>
+
+        <div class="govuk-form-group">
+          <input class="govuk-input govuk-!-width-full" id="employer-address-line-three" name="employer-address-line-three" type="text"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="two-thirds">
+            Town or city
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="employer-address-line-town" name="employer-address-line-town" type="text" value=""></div>
+        
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="one-third">
+            Postcode
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="employer-address-line-post-code" name="employer-address-line-post-code" type="text" value=""></div>
+    
+        
+                
+
+
+<!-- CTA -->
+{{ govukButton({
+  text: "Save and continue"
+}) }}
+<!-- END CTA -->
+
+</form>
+
+  </main>
+</div>
+
+
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,239 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+ESFA admin services
+{% endblock %}
+
+{% block content %}
+
+<a href="search" class="govuk-back-link">Search again</a>
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-two-thirds">
+          
+      <form action="check-and-submit" method="post" novalidate data-validate='error-state-validation'>
+
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Are you sure this certificate needs reprinting?</h1>
+
+      {{ govukInsetText({
+        text: "Do not request certificates with a status of 'sent to printer' or 'printed'; you will need to wait until the status changes to 'delivered' or 'not delivered'."
+      }) }}
+      
+<!-- certificate status START -->
+{{ govukTable({
+  firstCellIsHeader: true,
+  rows: [
+  [
+      {
+        text: "Certificate number"
+      },
+      {
+        text: "00011742"
+      }
+    ],
+    [
+      {
+        text: "Apprentice name"
+      },
+      {
+        text: "King Kanth"
+      }
+    ],
+    [
+      {
+        text: "ULN"
+      },
+      {
+        text: "7551852222"
+      }
+    ],
+    [
+      {
+        text: "Status"
+      },
+      {
+        text: "Sent to printer"
+      }
+    ],
+    [
+      {
+        text: "Date sent to printer"
+      },
+      {
+        text: "06/09/2021 16:52:03"
+      }
+    ]
+  ]
+}) }}
+<!-- certificate status END -->
+
+<p class="govuk-body govuk-!-margin-bottom-9"></p>
+
+<!-- reason for request START -->
+
+{% set NotReceivedHtml %}
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "Provide more detail"
+  }
+}) }}
+{% endset -%}
+
+{% set IncorrectAddressHtml %}
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "Provide more detail"
+  }
+}) }}
+{% endset -%}
+
+{% set IncorrectApprenticeDetailsHtml %}
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "Provide more detail"
+  }
+}) }}
+{% endset -%}
+
+{% set IncorrectApprenticeshipDetailsHtml %}
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "Provide more detail"
+  }
+}) }}
+{% endset -%}
+
+{% set LostDamagedHtml %}
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "Provide more detail"
+  }
+}) }}
+{% endset -%}
+
+{% set otherHtml %}
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "Provide more detail"
+  }
+}) }}
+{% endset -%}
+
+{{ govukRadios({
+  idPrefix: "reprint-reason",
+  name: "reprint-reason",
+  fieldset: {
+    legend: {
+      text: "Reason for requesting a duplicate certificate",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  hint: {
+    text: "By giving accurate reasons you will be helping us to improve this service."
+  },
+  items: [
+    {
+      text: "Delivery failed",
+      value: "certificate-not-received",
+      conditional: {
+        html: NotReceivedHtml
+      }
+    },
+    {
+      text: "Apprentice moved to different employer or no longer with employer",
+      value: "incorrect-apprentice-details",
+      conditional: {
+        html: IncorrectApprenticeDetailsHtml
+      }
+    },
+    {
+      text: "Incorrect apprentice details",
+      value: "incorrect-apprentice-details",
+      conditional: {
+        html: IncorrectApprenticeDetailsHtml
+      }
+    },
+    {
+      text: "Incorrect apprentice address",
+      value: "incorrect-address",
+      conditional: {
+        html: IncorrectAddressHtml
+      }
+    },
+    {
+      text: "Incorrect employer address",
+      value: "incorrect-address",
+      conditional: {
+        html: IncorrectAddressHtml
+      }
+    },
+    {
+      text: "Incorrect apprenticeship details",
+      value: "incorrect-apprenticeship-details",
+      conditional: {
+        html: IncorrectApprenticeshipDetailsHtml
+      }
+    },
+    {
+      text: "Lost or damaged by receiver",
+      value: "lost-damaged-by-receiver",
+      conditional: {
+        html: LostDamagedHtml
+      }
+    },
+    {
+      divider: "or"
+    },
+    {
+      text: "Other",
+      value: "other",
+      conditional: {
+        html: otherHtml
+      }
+    }
+  ]
+}) }}
+<!-- reason for request END -->
+      
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+    
+    <script type="application/json" id="error-state-validation">
+      { 		  	
+           "reprint-reason": {
+          "presence": {
+            "message": "^Select a reason and provide more details"
+          }
+        }
+      }
+    </script>
+    
+      </main>
+    </div>
+    
+    </div>
+  </div>
+
+{% endblock %}

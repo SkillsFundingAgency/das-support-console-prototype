@@ -125,6 +125,16 @@ router.post('/356/to-be/address-details-correct', (req, res) => {
 
 
 
+// ticket 340: who to send certificate to (certificate receiver)
+router.post('/340/v2/send-the-certificate', (req, res) => {
+	if(req.session.data['send-the-certificate'] == 'apprentice'){
+		res.redirect('apprentice-add-address');
+	} else if(req.session.data['send-the-certificate'] == 'employer'){
+        res.redirect('employer-details');
+    }
+});
+
+
 
 
 module.exports = router
