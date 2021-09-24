@@ -23,16 +23,32 @@
       </div>
        <!--search input ENDS-->
 
+
+
+
+
+
+      
+
+
+
           <!--radio selection STARTS-->
         {{ govukRadios({
+          attributes: {
+            'data-module': 'moj-sortable-table'
+          },
           classes: "govuk-radios--inline",
           idPrefix: "initial-search",
           name: "initial-search",
+          
           fieldset: {
             legend: {
               text: " ",
               isPageHeading: true,
-              classes: "govuk-fieldset__legend--l"
+              classes: "govuk-fieldset__legend--l",
+              attributes: {
+                "aria-sort": "ascending"
+              }
             }
           },
          
@@ -67,105 +83,87 @@
     </div>
   </div>
 
-        {{ govukTable({
-          
-          captionClasses: "govuk-table__caption--m",
-          firstCellIsHeader: false,
-          head: [
-            {
-              text: "Account"
-            },
-            
-            {
-              text: "Account ID"
-            },
-            {
-              text: ""
-            }
-          ],
-          rows: [
-            [
-             
-              {
-                text: "ONA CONSULTING"
-              },
-              {
-                text: "XJ9NYR"
-              },
-              {
-                html: "<a href=ona-organisations>view</a>"
-                
-              }
-            ],
-            [
-             
-              {
-                text: "DIGITAL 1 CONSULTING LIMITED"
-              },
-              {
-                text: "WJJYLK"
-              },
-              {
-                html: "<a href=>view</a>"
-                
-              }
-            ],
-            [
-             
-              {
-                text: "GOLEM CONSULTING LIMITED"
-              },
-              {
-                text: "JRJ7JR"
-              },
-              {
-                html: "<a href=>view</a>"
-                
-              }
-            ],
-            [
-             
-              {
-                text: "NOV CONSULTING LIMITED"
-              },
-              {
-                text: "JJ8YLX"
-              },
-              {
-                html: "<a href=>view</a>"
-                
-              }
-            ],
-            [
-             
-              {
-                text: "RAJ & CO. CONSULTING LIMITED"
-              },
-              {
-                text: "MM7GDB"
-              },
-              {
-                html: "<a href=>view</a>"
-                
-              }
-            ],
-            [
-             
-              {
-                text: "SLE CONSULTING SERVICES LIMITED"
-              },
-              {
-                text: "W8VLGV"
-              },
-              {
-                html: "<a href=>view</a>"
-                
-              }
-            ]
-            
-            
-          ]
-        }) }}
+
+
+
+               <!-- TABLE - START -->
+               <table class="govuk-table" id="manage-apprenticeships-table">
+                <thead class="govuk-table__head">
+                     <tr class="govuk-table__row">
+                          <th scope="col" class="govuk-table__header" onclick="sortApprenticeships(0)"><div class="sort">Account</div></th>
+                          <th scope="col" class="govuk-table__header" onclick="sortApprenticeships(1)"><div class="sort">Account ID</div></th>
+                          
+                          <th scope="col" class="govuk-table__header non-filter"></th>
+                     </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+
+                     <!-- TABLE ROW - ONE - START -->
+                     <tr class="govuk-table__row changes-for-review live">
+                          <td class="govuk-table__cell">ONA CONSULTING</td>
+                          <td class="govuk-table__cell">XJ9NYR</td>
+                         
+                          <td class="govuk-table__cell"><a href="ona-organisations">View</a></td>
+                     </tr>
+                     <!-- TABLE ROW - ONE - END -->
+
+                     <!-- TABLE ROW - TWO - START -->
+                     <tr class="govuk-table__row stopped changes-pending" class="st">
+                          <td class="govuk-table__cell">DIGITAL 1 CONSULTING LIMITED	</td>
+                          <td class="govuk-table__cell">WJJYLK</td>
+                          
+                          <td class="govuk-table__cell"><a href="#">View</a></td>
+                     </tr>
+                     <!-- TABLE ROW - TWO - END -->
+
+                      <!-- TABLE ROW - THREE - START -->
+                      <tr class="govuk-table__row stopped changes-pending" class="st">
+                        <td class="govuk-table__cell">GOLEM CONSULTING LIMITED	</td>
+                        <td class="govuk-table__cell">JRJ7JR</td>
+                        
+                        <td class="govuk-table__cell"><a href="#">View</a></td>
+                   </tr>
+                   <!-- TABLE ROW - THREE - END -->
+
+                    <!-- TABLE ROW - THREE - START -->
+                    <tr class="govuk-table__row stopped changes-pending" class="st">
+                      <td class="govuk-table__cell">NOV CONSULTING LIMITED		</td>
+                      <td class="govuk-table__cell">JJ8YLX</td>
+                      
+                      <td class="govuk-table__cell"><a href="#">View</a></td>
+                 </tr>
+                 <!-- TABLE ROW - THREE - END -->
+
+                 <!-- TABLE ROW - THREE - START -->
+                 <tr class="govuk-table__row stopped changes-pending" class="st">
+                  <td class="govuk-table__cell">RAJ & CO. CONSULTING LIMITED		</td>
+                  <td class="govuk-table__cell">MM7GDB</td>
+                  
+                  <td class="govuk-table__cell"><a href="#">View</a></td>
+             </tr>
+             <!-- TABLE ROW - THREE - END -->
+
+             <!-- TABLE ROW - THREE - START -->
+             <tr class="govuk-table__row stopped changes-pending" class="st">
+              <td class="govuk-table__cell">SLE CONSULTING SERVICES LIMITED		</td>
+              <td class="govuk-table__cell">W8VLGV</td>
+              
+              <td class="govuk-table__cell"><a href="#">View</a></td>
+         </tr>
+         <!-- TABLE ROW - THREE - END -->
+
+                </tbody>
+           </table>
+           <!-- TABLE - END -->
+
+
+
+
+
+
+
+
+
 
 
 

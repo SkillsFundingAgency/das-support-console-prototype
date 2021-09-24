@@ -32,7 +32,7 @@
      
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-one-quarter">
-           <a href="#" class="noUnder"> <div class="blueContainer">
+           <a href="#" class="noUnder"> <div class="greyContainer">
                <p>Organisations</p>
             </div></a>
             <a href="ona-finance" class="noUnder"><div class="greyContainer">
@@ -44,7 +44,7 @@
             <a href="ona-commitments" class="noUnder"><div class="greyContainer">
               <p>Commitments</p>
             </div></a>
-            <a href="ona-providers" class="noUnder"><div class="greyContainer">
+            <a href="ona-providers" class="noUnder"><div class="blueContainer">
               <p>Training providers</p>
             </div></a>
           </div>
@@ -53,7 +53,7 @@
     
           <div class="govuk-grid-column-three-quarters ">
               <div class="borderLeft">
-                <h2 class="govuk-heading-l">Organisations</h2>
+                <h2 class="govuk-heading-l">Training providers</h2>
                 
                  
                           {{ govukTable({
@@ -62,86 +62,43 @@
                             firstCellIsHeader: false,
                             head: [
                               {
-                                text: "Account name",
+                                text: "Training provider",
                                 classes: 'govuk-!-width-one-third'
                               },
                               {
-                                text: "Address",
-                                classes: 'govuk-!-width-one-half'
+                                text: "Add apprentice permissions",
+                                classes: 'govuk-!-width-one-third'
                               },
+                              
                               {
-                                text: "Source"
-                              },
-                              {
-                                text: "Agreement status"
+                                text: "Recruit apprentice permissions",
+                                classes: 'govuk-!-width-one-third'
                               }
                             ],
                             rows: [
                               [
                               
                                 {
-                                  text: "ONA CONSULTING LTD"
+                                  text: "EDUC8 TRAINING (ENGLAND) LIMITED"
                                 },
                                 {
-                                  text: "Satago cottage, 360a Brighton Road, Croydon, CR2 6AL"
+                                  text: "Allow"
                                 },
                                 {
-                                  text: "Companies House"
-                                },
-                                {
-                                  html: "Pending"
-                                  
+                                  text: "Do not allow"
                                 }
                                 
                               ],
                               [
                               
                                 {
-                                  text: "DELE LTD"
+                                  text: "SOUTHAMPTON ENGINEERING TRAINING ASSOCIATION LIMITED (THE)"
                                 },
                                 {
-                                  text: "18 Botwell Common Road, Hayes, London, Middlesex. UB3 1JA"
+                                  text: "Allow"
                                 },
                                 {
-                                  text: "Companies House"
-                                },
-                                {
-                                  html: "Pending"
-                                  
-                                }
-                                
-                              ],
-                              [
-                              
-                                {
-                                  text: "VAC LIMITED"
-                                },
-                                {
-                                  text: "Kemp House, 160 City Road, London, EC1V"
-                                },
-                                {
-                                  text: "Companies House"
-                                },
-                                {
-                                  html: "Pending"
-                                  
-                                }
-                                
-                              ],
-                              [
-                              
-                                {
-                                  text: "WAC LTD"
-                                },
-                                {
-                                  text: "28 Ahlux Court Millwright Street, Leeds, LS2 7QQ"
-                                },
-                                {
-                                  text: "Companies House"
-                                },
-                                {
-                                  html: "Pending"
-                                  
+                                  text: "Allow, but I want to review job adverts before they’re advertised"
                                 }
                                 
                               ]
