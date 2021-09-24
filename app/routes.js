@@ -88,6 +88,11 @@ router.post(`/350/to-be/tier2/initial-search`, function (req, res) {
        ) {
         res.redirect(`/350/to-be/tier2/user-list`);
     }
+    else if (userORaccount === 'uln'
+    ) {
+     res.redirect(`/350/to-be/tier2/uln-list`);
+ }
+
    else res.redirect(`/350/to-be/tier2/account-list`);
 });
 
@@ -102,6 +107,7 @@ router.post(`/350/to-be/tier2/uln-or-cohort`, function (req, res) {
        ) {
         res.redirect(`/350/to-be/tier2/uln-view`);
     }
+    
    else res.redirect(`/350/to-be/tier2/cohort-summary`);
 });
 
