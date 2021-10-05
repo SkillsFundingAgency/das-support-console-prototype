@@ -1,0 +1,120 @@
+
+{% extends "layout-to-be.html" %}
+
+{% block pageTitle %}
+  Support console - Continuous improvements
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-whole">
+     
+ <form action="initial-search" method="post" class="govuk-!-margin-bottom-9">
+     
+      
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">John Smith
+        <span class="govuk-caption-l">
+          2618290932
+        </span>
+      </h1>
+
+      
+      
+
+         
+     
+       
+     
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <div class="blueContainer">
+               <p>Apprenticeship history</p>
+            </div>
+          </div>
+        
+
+    
+          <div class="govuk-grid-column-three-quarters ">
+              <div class="borderLeft">
+                
+
+                
+
+              
+
+              
+
+                <h2 class="govuk-heading-l">
+                  Apprenticeship history
+                </h2>
+
+                {{ govukTable({
+          
+                  captionClasses: "govuk-table__caption--m",
+                  firstCellIsHeader: false,
+                  head: [
+                    {
+                      text: "Apprenticeship training course"
+                    },
+                    
+                    {
+                      text: "Status"
+                    },
+                    {
+                      text: "Employer"
+                    },
+                    {
+                      text: ""
+                    }
+                  ],
+                  rows: [
+                    [
+                     
+                      {
+                        text: "Able searfarer (deck) level: 2(standard)"
+                      },
+                     
+                      {
+                        text: "Live"
+                      },
+                      {
+                        text: "ONA CONSULTING"
+                      },
+                      {
+                        html: "<a href=uln-summary>view</a>"
+                        
+                      }
+                    ],
+                    [
+                     
+                      {
+                        text: "Adult care worker, Level: 2"
+                      },
+                     
+                      {
+                        text: "Stopped"
+                      },
+                      {
+                        text: "Coventry City Council"
+                      },
+                      {
+                        html: "<a href=#>view</a>"
+                        
+                      }
+                    ]
+                  ]
+                }) }}
+
+
+            </div>
+
+      </form>
+      </div>
+    </div>
+    </div>
+
+    </div>
+  </div>
+
+{% endblock %}

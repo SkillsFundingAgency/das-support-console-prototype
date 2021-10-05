@@ -384,10 +384,10 @@
 
                 {% set trainingProviderHistoryHtml %}
                 <h2 class="govuk-heading-l">
-                  Training provider history
+                  Training provider and employer history
                 </h2>
                <h3 class="govuk-heading-m">
-                 Change 1
+                 Change 1 - Training provider
                </h3>
                 {{ govukTable({
                   caption: " ",
@@ -463,7 +463,79 @@
             
 
                 
-
+                <h3 class="govuk-heading-m">
+                  Change 2 - Employer
+                </h3>
+                 {{ govukTable({
+                   caption: " ",
+                   firstCellIsHeader: true,
+                   classes: "govuk-!-margin-bottom-6",
+                   head: [
+                   {
+                     text: " ",
+                     classes: "govuk-!-width-one-third"
+                   },
+                   {
+                     text: " ",
+                     classes: "govuk-!-width-one-third"
+                   }
+                   
+                 ],
+                   rows: [
+                     [
+                       {
+                         text: "Current Employer"
+                       },
+                       {
+                         text: "ONA Consulting"
+                       }
+                     ],
+                     [
+                       {
+                         text: "Current planned training dates"
+                       },
+                       {
+                         text: "Oct 2020 to Sep 2021"
+                       }
+                     ]
+                   ]
+                 }) }}
+ 
+ 
+                 {{ govukTable({
+                   caption: " ",
+                   firstCellIsHeader: true,
+                   classes: "govuk-!-margin-bottom-9",
+                   head: [
+                   {
+                     text: " ",
+                     classes: "govuk-!-width-one-third"
+                   },
+                   {
+                     text: " ",
+                     classes: "govuk-!-width-one-third"
+                   }
+                   
+                 ],
+                   rows: [
+                     [
+                       {
+                         text: "Previous employer"
+                       },
+                       {
+                         text: "Coventry City Council"
+                       }
+                     ],
+                     [
+                       {
+                         text: "Previous planned training dates"
+                       },
+                       {
+                         text: "Feb 2020 jun 2020"
+                       }
+                     ]
+                   ]
+                 }) }}
 
                 {% endset -%}
 
@@ -475,7 +547,10 @@
                   <h3 class="govuk-heading-m">
                     Change 1
                     <span class="govuk-caption-m">
-                      Requested by Training provider 20 Jun 2019 - Approved 23 Jun  2019
+                      Requested by Training provider 20 Jun 2019 
+                    </span>
+                    <span class="govuk-caption-m">
+                      Approved by Employer 23 Jun  2019
                     </span>
                   </h3>
                 {{ govukTable({
@@ -545,7 +620,7 @@
                       }
                     },
                     {
-                      label: "Training provider history",
+                      label: "Provider / Employer history",
                       id: "training-provider-history",
                       panel: {
                         html: trainingProviderHistoryHtml
