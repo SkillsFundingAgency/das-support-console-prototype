@@ -12,7 +12,7 @@ ESFA admin services
   <div class="govuk-grid-row govuk-!-margin-top-6">
     <div class="govuk-grid-column-two-thirds">
           
-      <form action="check-and-submit" method="post" novalidate data-validate='error-state-validation' novalidate data-validate='error-state-validation-2'>
+      <form action="check-and-submit" method="post" novalidate data-validate='error-state-validation'>
 
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Are you sure this certificate needs reprinting?</h1>
 
@@ -63,14 +63,6 @@ ESFA admin services
       {
         text: "06/09/2021 16:52:03"
       }
-    ],
-    [
-      {
-        text: "Delivery address"
-      },
-      {
-        html: "Joanna Smith<br>Human Resources<br>ONA Consulting Limited<br>	25 Townsville House<br>Townsend Avenue<br>Coventry<br>CV1 1AB"
-      }
     ]
   ]
 }) }}
@@ -78,19 +70,63 @@ ESFA admin services
 
 <p class="govuk-body govuk-!-margin-bottom-9"></p>
 
-<!-- ticket ref -->
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-label--m" for="ticket-ref">
-    Enter the ticket request number
-  </label>
-  <input class="govuk-input govuk-!-margin-bottom-6 govuk-input--width-20" id="ticket-ref" name="ticket-ref" type="text"></div>
-<!-- ticket ref -->
-
-
-
 <!-- reason for request START -->
 
-<!-- other texbox -->
+{% set NotReceivedHtml %}
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "Provide more detail"
+  }
+}) }}
+{% endset -%}
+
+{% set IncorrectAddressHtml %}
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "Provide more detail"
+  }
+}) }}
+{% endset -%}
+
+{% set IncorrectApprenticeDetailsHtml %}
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "Provide more detail"
+  }
+}) }}
+{% endset -%}
+
+{% set IncorrectApprenticeshipDetailsHtml %}
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "Provide more detail"
+  }
+}) }}
+{% endset -%}
+
+{% set LostDamagedHtml %}
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "Provide more detail"
+  }
+}) }}
+{% endset -%}
+
 {% set otherHtml %}
 {{ govukCharacterCount({
   name: "with-hint",
@@ -101,15 +137,14 @@ ESFA admin services
   }
 }) }}
 {% endset -%}
-<!-- end other textbox -->
 
-{{ govukCheckboxes({
+{{ govukRadios({
   idPrefix: "reprint-reason",
   name: "reprint-reason",
   fieldset: {
     legend: {
       text: "Reason for requesting a duplicate certificate",
-      isPageHeading: false,
+      isPageHeading: true,
       classes: "govuk-fieldset__legend--m"
     }
   },
@@ -172,7 +207,6 @@ ESFA admin services
     {
       text: "Other",
       value: "other",
-      behaviour: "exclusive",
       conditional: {
         html: otherHtml
       }
@@ -180,38 +214,22 @@ ESFA admin services
   ]
 }) }}
 <!-- reason for request END -->
-
       
       <button class="govuk-button" data-module="govuk-button">
         Continue
       </button>
     </form>
     
-
-    <!-- error messages -->
-
-    <script type="application/json" id="error-state-validation-2">
-      { 		  	
-           "ticket-ref": {
-          "presence": {
-            "message": "^Enter the ticket reference"
-          }
-        }
-      }
-    </script>
-
     <script type="application/json" id="error-state-validation">
       { 		  	
            "reprint-reason": {
           "presence": {
-            "message": "^Select a reason"
+            "message": "^Select a reason and provide more details"
           }
         }
       }
     </script>
-
-
-    <!-- error messages -->
+    
       </main>
     </div>
     

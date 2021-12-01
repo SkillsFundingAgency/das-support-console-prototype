@@ -179,6 +179,10 @@ ESFA admin services
 <!-- SENDING CERTIFICATE SUMMARY -->
       <h3 class="govuk-heading-m">We'll send the certificate to</h3>
 
+      <div class="govuk-inset-text">
+        If you are changing the recipient from apprentice to employer, you need to change the certificate receiver.
+      </div>
+
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
         <div class="govuk-summary-list__row">
@@ -203,15 +207,9 @@ ESFA admin services
           <dd class="govuk-summary-list__value">
               <span id="Name" class="govuk-error-message field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
 
-              {% if data['recipient-name'] %}
-                
-              {{ data['recipient-name'] }}
-  
-              {% else %}
   
               King Kanth 
   
-              {% endif %}
 
           </dd>
           <dd class="govuk-summary-list__actions">
@@ -278,7 +276,7 @@ ESFA admin services
               
         </dd>
         <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
+                <a class="govuk-link" href="apprentice-change-address">
                     Change<span class="govuk-visually-hidden"> address</span>
                 </a>
              
