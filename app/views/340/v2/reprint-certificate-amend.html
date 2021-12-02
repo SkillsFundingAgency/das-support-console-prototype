@@ -14,11 +14,8 @@ ESFA admin services
           
       <form action="check-and-submit" method="post" novalidate data-validate='error-state-validation'>
 
-      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Are you sure this certificate needs reprinting?</h1>
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Are you sure this certificate needs amending?</h1>
 
-      {{ govukInsetText({
-        text: "Do not request certificates with a status of 'sent to printer' or 'printed'; you will need to wait until the status changes to 'delivered' or 'not delivered'."
-      }) }}
       
 <!-- certificate status START -->
 {{ govukTable({
@@ -37,7 +34,7 @@ ESFA admin services
         text: "Apprentice name"
       },
       {
-        text: "King Kanth"
+        text: "Joanna Smith"
       }
     ],
     [
@@ -45,7 +42,7 @@ ESFA admin services
         text: "ULN"
       },
       {
-        text: "7551852222"
+        text: "8551852222"
       }
     ],
     [
@@ -53,12 +50,12 @@ ESFA admin services
         text: "Status"
       },
       {
-        text: "Sent to printer"
+        text: "Submitted"
       }
     ],
     [
       {
-        text: "Date sent to printer"
+        text: "Date submitted"
       },
       {
         text: "06/09/2021 16:52:03"
@@ -69,7 +66,7 @@ ESFA admin services
         text: "Delivery address"
       },
       {
-        html: "Joanna Smith<br>Human Resources<br>ONA Consulting Limited<br>	25 Townsville House<br>Townsend Avenue<br>Coventry<br>CV1 1AB"
+        html: "Joanna Smith<br>25 Townsville House<br>Townsend Avenue<br>Coventry<br>CV1 1AB"
       }
     ]
   ]
@@ -108,7 +105,7 @@ ESFA admin services
   name: "reprint-reason",
   fieldset: {
     legend: {
-      text: "Reason for requesting a duplicate certificate",
+      text: "Reason for amending certificate information",
       isPageHeading: false,
       classes: "govuk-fieldset__legend--m"
     }
@@ -117,20 +114,6 @@ ESFA admin services
     text: "Select all that apply; by giving accurate reasons you will be helping us to improve this service."
   },
   items: [
-    {
-      text: "Delivery failed",
-      value: "certificate-not-received",
-      conditional: {
-        html: NotReceivedHtml
-      }
-    },
-    {
-      text: "Apprentice moved to different employer or no longer with employer",
-      value: "incorrect-apprentice-details",
-      conditional: {
-        html: IncorrectApprenticeDetailsHtml
-      }
-    },
     {
       text: "Incorrect apprentice details",
       value: "incorrect-apprentice-details",
@@ -157,13 +140,6 @@ ESFA admin services
       value: "incorrect-apprenticeship-details",
       conditional: {
         html: IncorrectApprenticeshipDetailsHtml
-      }
-    },
-    {
-      text: "Lost or damaged by receiver",
-      value: "lost-damaged-by-receiver",
-      conditional: {
-        html: LostDamagedHtml
       }
     },
     {
@@ -214,8 +190,8 @@ ESFA admin services
       }
     </script>
 
-    <!-- error messages -->
 
+    <!-- error messages -->
       </main>
     </div>
     
