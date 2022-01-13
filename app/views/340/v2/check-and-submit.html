@@ -264,7 +264,7 @@ ESFA admin services
                 </a>
             </dd>
         </div>
-        <div class="govuk-summary-list__row">
+        <!-- <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
                 Employer
             </dt>
@@ -288,12 +288,27 @@ ESFA admin services
                         Change<span class="govuk-visually-hidden"> employer</span>
                     </a>
             </dd>
-        </div>
+        </div> -->
         <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
                 Address
             </dt>
             <dd class="govuk-summary-list__value">
+                <!-- employer -->
+
+                {% if data['employer-name'] %}
+                
+                {{ data['employer-name'] }} <br>
+
+                {% elif data['employer-name'] === '' %}
+    
+                {% else %}
+    
+                ONA Consulting Limited <br>
+    
+                {% endif %}
+
+                <!-- employer -->
 
                 <!-- line 1 -->
                 {% if data['employer-address-line-one'] %}

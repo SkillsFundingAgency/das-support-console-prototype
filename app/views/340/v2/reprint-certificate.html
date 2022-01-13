@@ -16,8 +16,9 @@ ESFA admin services
 
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Are you sure this certificate needs reprinting?</h1>
 
-      {{ govukInsetText({
-        text: "Do not request certificates with a status of 'sent to printer' or 'printed'; you will need to wait until the status changes to 'delivered' or 'not delivered'."
+      {{ govukWarningText({
+        text: "Do not request certificates with a status of 'sent to printer' or 'printed'; you will need to wait until the status changes to 'delivered' or 'not delivered'.",
+        iconFallbackText: "Warning"
       }) }}
       
 <!-- certificate status START -->
@@ -64,6 +65,14 @@ ESFA admin services
         text: "06/09/2021 16:52:03"
       }
     ],
+    [
+    {
+      text: "Certificate receiver"
+    },
+    {
+      text: "Employer"
+    }
+  ],
     [
       {
         text: "Delivery address"
