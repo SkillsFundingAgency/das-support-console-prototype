@@ -12,7 +12,7 @@ ESFA admin services
   <div class="govuk-grid-row govuk-!-margin-top-6">
     <div class="govuk-grid-column-two-thirds">
           
-      <form action="check-and-submit" method="post" novalidate data-validate='error-state-validation'>
+      <form action="check-and-submit-amend" method="post" novalidate data-validate='error-state-validation'>
 
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Are you sure this certificate needs amending?</h1>
 
@@ -181,6 +181,13 @@ ESFA admin services
            "reprint-reason": {
           "presence": {
             "message": "^Select reason(s) for amending certificate information"
+          }
+        },
+
+
+        "with-hint": {
+          "presence": {
+            "message": "^Provide more detail"
           }
         }
 
