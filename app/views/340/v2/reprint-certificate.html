@@ -17,7 +17,7 @@ ESFA admin services
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Are you sure this certificate needs reprinting?</h1>
 
       {{ govukWarningText({
-        text: "Do not request reprints with a status of 'sent to printer' or 'printed; you will need to wait until the status changes to 'delivered' or 'not delivered'.",
+        text: "Do not request reprints with a status of 'sent to printer', 'printed' or 'reprint requested'; you will need to wait until the status changes to 'delivered' or 'not delivered'.",
         iconFallbackText: "Warning"
       }) }}
       
@@ -90,7 +90,7 @@ ESFA admin services
 <!-- ticket ref -->
 <div class="govuk-form-group">
   <label class="govuk-label govuk-label--m" for="ticket-ref">
-    Enter the ticket request number
+    Enter the ticket reference number
   </label>
   <input class="govuk-input govuk-!-margin-bottom-6 govuk-input--width-20" id="ticket-ref" name="ticket-ref" type="text"></div>
 <!-- ticket ref -->
@@ -106,7 +106,7 @@ ESFA admin services
   id: "with-hint",
   maxlength: 200,
   label: {
-    text: "Provide more detail"
+    text: "Give details"
   }
 }) }}
 {% endset -%}
@@ -117,7 +117,7 @@ ESFA admin services
   name: "reprint-reason",
   fieldset: {
     legend: {
-      text: "Reason for requesting a duplicate certificate",
+      text: "Reason for requesting a certificate reprint",
       isPageHeading: false,
       classes: "govuk-fieldset__legend--m"
     }
@@ -206,13 +206,13 @@ ESFA admin services
 
            "reprint-reason": {
           "presence": {
-            "message": "^Select reason(s) for requesting a duplicate certificate"
+            "message": "^Select reason(s) for requesting a certificate reprint"
           }
         },
 
         "with-hint": {
           "presence": {
-            "message": "^Provide more detail"
+            "message": "^Give details"
           }
         }
 
