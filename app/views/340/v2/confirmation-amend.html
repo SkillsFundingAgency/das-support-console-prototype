@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+ESFA admin services
+{% endblock %}
+
+{% block main %}
+
+
+{% block content %}
+
+
+
+<div class="govuk-width-container">
+  {{ govukPhaseBanner({
+    tag: {
+      text: "prototype"
+    },
+    html: 'This is not a real service.'
+  }) }}
+
+
+  <main class="govuk-main-wrapper">
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-6">
+          <h1 class="govuk-panel__title">
+            Certificate information amended
+          </h1>
+        </div>
+
+
+        <p class="govuk-body">You have amended the certificate for:</p>
+
+                                 
+            <dl class="govuk-summary-list govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Joanna Smith
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                ULN 
+              </dt>
+              <dd class="govuk-summary-list__value">
+                8551852222
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Certificate reference
+              </dt>
+              <dd class="govuk-summary-list__value">
+                00011742
+              </dd>
+            </div>
+          </dl>
+    
+    
+
+        
+        
+
+        <p class="govuk-body">
+          <a href="search">Search for another certificate</a>
+        </p> 
+
+  </main>
+</div>
+
+
+{% endblock %}
+{% endblock %}
