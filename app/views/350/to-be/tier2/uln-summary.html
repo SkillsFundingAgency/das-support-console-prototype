@@ -91,10 +91,10 @@
               [
                 
               {
-                text: "Apprenticeship training course"
+                text: "Email address"
               },
               {
-                html: "Able seafarer (deck) Level: 2(standard)"
+                html: "j.smith@emailaddress.com"
                 
               }
               
@@ -199,12 +199,94 @@
                 ]
                 }) }}
 
-
+                {{ govukTable({
+                  
+                  caption: "Training",
+                  captionClasses: "govuk-table__caption--m",
+                  firstCellIsHeader: true,
+                  head: [
+                    {
+                      text: " ",
+                      classes: 'govuk-!-width-one-half'
+                    },
+                   
+                    {
+                      text: "",
+                      classes: 'govuk-!-width-one-half'
+                    }
+                  ],
+                  rows: [
+                    
+                  [
+                      {
+                        text: "Legal entity"
+                      },
+                      {
+                        html: "Coventry council"
+                        
+                      }
+                    ],
+                    [
+                      {
+                        text: "Training provider"
+                      },
+                      {
+                        html: "Southampton Engineering Training Association Limited (THE)"
+                        
+                      }
+                    ],
+                    [
+                      {
+                        text: "UKPRN"
+                      },
+                      {
+                        html: "10005760"
+                        
+                      }
+                    ],
+                    [
+                      {
+                        text: "Apprenticeship training course"
+                      },
+                      {
+                        html: "Able seafarer (deck) Level: 2(standard)"
+                        
+                      }
+                    ],
+                    [
+                      {
+                        text: "Version"
+                      },
+                      {
+                        html: "1.1"
+                        
+                      }
+                    ],
+                    [
+                      {
+                        text: "Option"
+                      },
+                      {
+                        html: "Ship Captain"
+                        
+                      }
+                    ],
+                    [
+                      {
+                        text: "Apprenticeship code"
+                      },
+                      {
+                        html: "34"
+                        
+                      }
+                    ]
+                ]
+                }) }}
 
 
                 {{ govukTable({
                   
-                  caption: "Training dates",
+                  caption: "Dates",
                   captionClasses: "govuk-table__caption--m",
                   firstCellIsHeader: true,
                   head: [
@@ -463,79 +545,6 @@
             
 
                 
-                <h3 class="govuk-heading-m">
-                  Change 2 - Employer
-                </h3>
-                 {{ govukTable({
-                   caption: " ",
-                   firstCellIsHeader: true,
-                   classes: "govuk-!-margin-bottom-6",
-                   head: [
-                   {
-                     text: " ",
-                     classes: "govuk-!-width-one-third"
-                   },
-                   {
-                     text: " ",
-                     classes: "govuk-!-width-one-third"
-                   }
-                   
-                 ],
-                   rows: [
-                     [
-                       {
-                         text: "Current Employer"
-                       },
-                       {
-                         text: "ONA Consulting"
-                       }
-                     ],
-                     [
-                       {
-                         text: "Current planned training dates"
-                       },
-                       {
-                         text: "Oct 2020 to Sep 2021"
-                       }
-                     ]
-                   ]
-                 }) }}
- 
- 
-                 {{ govukTable({
-                   caption: " ",
-                   firstCellIsHeader: true,
-                   classes: "govuk-!-margin-bottom-9",
-                   head: [
-                   {
-                     text: " ",
-                     classes: "govuk-!-width-one-third"
-                   },
-                   {
-                     text: " ",
-                     classes: "govuk-!-width-one-third"
-                   }
-                   
-                 ],
-                   rows: [
-                     [
-                       {
-                         text: "Previous employer"
-                       },
-                       {
-                         text: "Coventry City Council"
-                       }
-                     ],
-                     [
-                       {
-                         text: "Previous planned training dates"
-                       },
-                       {
-                         text: "Feb 2020 jun 2020"
-                       }
-                     ]
-                   ]
-                 }) }}
 
                 {% endset -%}
 
