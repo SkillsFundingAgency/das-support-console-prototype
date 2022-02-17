@@ -1,0 +1,97 @@
+
+{% extends "layout-to-be.html" %}
+
+{% block pageTitle %}
+  Support console - Continuous improvements
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-whole">
+     
+ <form action="initial-search" method="post" class="govuk-!-margin-bottom-9">
+     
+      
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">John Smith
+        <span class="govuk-caption-l">
+          2618290932
+        </span>
+      </h1>
+
+      
+      
+
+         
+     
+       
+     
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <div class="blueContainer">
+               <p>Apprenticeship history</p>
+            </div>
+          </div>
+        
+
+    
+          <div class="govuk-grid-column-three-quarters ">
+              <div class="borderLeft">
+                
+
+                
+
+              
+
+              
+
+                <h2 class="govuk-heading-l">
+                  Employer verification
+                </h2>
+
+                <p class="govuk-body">
+                  Enter the following information to verify the caller's identity:
+                <p>
+                  <p class="govuk-body">
+                    3rd and 4th character of a PAYE scheme (excluding the /):
+                  <p>
+                    <br>
+{{ govukDateInput({
+  id: "date",
+  name: "date",
+  
+ 
+  items: [
+    
+    {
+      classes: "govuk-input--width-2",
+      name: "",
+      value: ""
+    },
+    {classes: "govuk-input--width-2",
+      name: "",
+      value: ""
+    }
+  ]
+}) }}
+
+<p class="govuk-body">
+  This will give you access to see details of this learner for this employer.
+
+<p>
+
+  {{ govukButton({
+    text: "Submit"
+  }) }}
+
+            </div>
+
+      </form>
+      </div>
+    </div>
+    </div>
+
+    </div>
+  </div>
+
+{% endblock %}
