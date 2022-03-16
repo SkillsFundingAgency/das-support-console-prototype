@@ -132,7 +132,17 @@
             }
             
             
-          ]
+          ],
+          [
+            
+          {
+            text: "Employer"
+          },
+          {
+            html: "ONA CONSULTING  "
+            
+          }
+        ]
 
                     
                   ]
@@ -205,6 +215,91 @@
                         
                       }
                     ] 
+                ]
+                }) }}
+
+
+                {{ govukTable({
+                  
+                  caption: "Training",
+                  captionClasses: "govuk-table__caption--m",
+                  firstCellIsHeader: true,
+                  head: [
+                    {
+                      text: " ",
+                      classes: 'govuk-!-width-one-half'
+                    },
+                   
+                    {
+                      text: "",
+                      classes: 'govuk-!-width-one-half'
+                    }
+                  ],
+                  rows: [
+                    
+                  [
+                      {
+                        text: "Legal entity"
+                      },
+                      {
+                        html: "Coventry council"
+                        
+                      }
+                    ],
+                    [
+                      {
+                        text: "Training provider"
+                      },
+                      {
+                        html: "Southampton Engineering Training Association Limited (THE)"
+                        
+                      }
+                    ],
+                    [
+                      {
+                        text: "UKPRN"
+                      },
+                      {
+                        html: "10005760"
+                        
+                      }
+                    ],
+                    [
+                      {
+                        text: "Apprenticeship training course"
+                      },
+                      {
+                        html: "Able seafarer (deck) Level: 2(standard)"
+                        
+                      }
+                    ],
+                    [
+                      {
+                        text: "Version"
+                      },
+                      {
+                        html: "1.1"
+                        
+                      }
+                    ],
+                    [
+                      {
+                        text: "Option"
+                      },
+                      {
+                        html: "Ship Captain"
+                        
+                      }
+                    ],
+                    [
+                      {
+                        text: "Apprenticeship code"
+                      },
+                      {
+                        html: "34"
+                        
+                      }
+                    ]
                 ]
                 }) }}
 
@@ -558,13 +653,6 @@
                       id: "training-provider-history",
                       panel: {
                         html: trainingProviderHistoryHtml
-                      }
-                    },
-                    {
-                      label: "Approved changes",
-                      id: "approved-changes",
-                      panel: {
-                        html: approvedHtml
                       }
                     }
                   ]
