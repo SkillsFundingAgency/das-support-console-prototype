@@ -374,12 +374,14 @@
                   <h2 class="govuk-heading-l">
                     Changes requested by training provider or employer
                   </h2>
-                  <h3 class="govuk-heading-m">
+                 <!-- <h3 class="govuk-heading-m">
                     Change 1
                     <span class="govuk-caption-m">
                       Requested by Training provider 20 Jun 2020
                     </span> 
-                  </h3>
+                  </h3>-->
+
+                  <p>Requested by Training provider 20 Jun 2020</p>
                    
                     {{ govukTable({
                       classes: "govuk-!-margin-bottom-9",
@@ -425,7 +427,7 @@
                       ]
                     }) }}
 
-                    <h3 class="govuk-heading-m">
+                    <!--<h3 class="govuk-heading-m">
                       Change 2
                       <span class="govuk-caption-m">
                         Requested by Training provider 20 Jun 2020
@@ -473,7 +475,7 @@
                           }
                         ]
                       ]
-                    }) }}
+                    }) }}-->
 
 
                 {% endset -%}
@@ -483,12 +485,12 @@
                   Training provider history
                 </h2>
                <h3 class="govuk-heading-m">
-                 Change 1
+                 Current
                </h3>
                 {{ govukTable({
                   caption: " ",
                   firstCellIsHeader: true,
-                  classes: "govuk-!-margin-bottom-6",
+                  classes: "govuk-!-margin-bottom-9",
                   head: [
                   {
                     text: " ",
@@ -521,10 +523,15 @@
                 }) }}
 
 
+                <h3 class="govuk-heading-m">
+                  Previous
+                </h3>
+
+
                 {{ govukTable({
                   caption: " ",
                   firstCellIsHeader: true,
-                  classes: "govuk-!-margin-bottom-9",
+                  classes: "govuk-!-margin-bottom-3",
                   head: [
                   {
                     text: " ",
@@ -550,11 +557,48 @@
                         text: "Previous planned training dates"
                       },
                       {
-                        text: "Feb 2020 jun 2020"
+                        text: "Feb 2020 to Jun 2020"
                       }
                     ]
                   ]
                 }) }}
+
+
+                {{ govukTable({
+                  caption: " ",
+                  firstCellIsHeader: true,
+                  classes: "govuk-!-margin-bottom-3",
+                  head: [
+                  {
+                    text: " ",
+                    classes: "govuk-!-width-one-third"
+                  },
+                  {
+                    text: " ",
+                    classes: "govuk-!-width-one-third"
+                  }
+                  
+                ],
+                  rows: [
+                    [
+                      {
+                        text: "Previous training provider"
+                      },
+                      {
+                        text: "ABC Training (England) Limited"
+                      }
+                    ],
+                    [
+                      {
+                        text: "Previous planned training dates"
+                      },
+                      {
+                        text: "Mar 2019 to Feb 2020"
+                      }
+                    ]
+                  ]
+                }) }}
+
 
             
 
